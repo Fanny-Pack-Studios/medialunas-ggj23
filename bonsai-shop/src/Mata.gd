@@ -1,6 +1,6 @@
 extends Polygon2D
 
-const MIN_DISTANCE := 60
+const MIN_DISTANCE := 120
 const CENTER_OFFSET := .9
 const ANGLES := 20
 

@@ -55,5 +55,4 @@ func set_shape(new_points: PackedVector2Array):
 	var dirt_polygon := PackedVector2Array()
 	for point in new_points:
 		dirt_polygon.append(point * .95)
-	print(dirt_polygon)
 	dirt.polygon = dirt_polygon

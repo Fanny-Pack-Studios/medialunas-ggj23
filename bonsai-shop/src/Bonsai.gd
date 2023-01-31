@@ -4,6 +4,8 @@ extends Node2D
 @export var leaves_scene : PackedScene
 @export var flower_scene : PackedScene
 
+@export var trunk_gradient : Gradient
+
 const MIN_PARTS := 10
 const MAX_PARTS := 20
 
@@ -21,6 +23,7 @@ const MAX_DEPTH := 3
 const BRANCH_CHANCE := .1
 
 var leaves_spawnpoints := PackedVector2Array()
+@onready var color := trunk_gradient.sample(randf())
 
 func _ready():
 	var parts := randi_range(MIN_PARTS, MAX_PARTS)
@@ -56,8 +59,10 @@ func generate_roots():
 
 func generate_trunk(starting_point: Vector2, parts: int, base_rotation:=0.0,  width:= 30, with_leaves := true, depth:=0):
 	var trunk := trunk_scene.instantiate()
-	trunk.width = width
 	add_child(trunk)
+	trunk.material.set_shader_parameter("base_color",color)
+	trunk.width = width
+	trunk.material.set_shader_parameter("rotation",wrapf(base_rotation,0,2*PI))
 	var last_point := starting_point
 	var trunk_points := PackedVector2Array([last_point])
 	for i in parts:

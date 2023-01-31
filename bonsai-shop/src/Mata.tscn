@@ -9,4 +9,3 @@ polygon = PackedVector2Array(-64, -125, -64, -125, -190, -23, -190, -23, -190, -
 script = ExtResource("1_ay4dq")
 
 [node name="Bonsai" parent="." instance=ExtResource("2_5brly")]
-y_sort_enabled = false

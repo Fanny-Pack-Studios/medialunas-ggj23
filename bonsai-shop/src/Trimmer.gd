@@ -40,7 +40,7 @@ func show_cutter():
 	var final_points := PackedVector2Array(points)
 	var reverse_points := PackedVector2Array()
 	for point in points:
-		var offset = (point - mata.geo_center).normalized() * CUT_WIDTH
+		var offset = (point - mata.global_position).normalized() * CUT_WIDTH
 		reverse_points.append(point + offset)
 	for i in reverse_points.size():
 		final_points.append(reverse_points[reverse_points.size()-1-i])

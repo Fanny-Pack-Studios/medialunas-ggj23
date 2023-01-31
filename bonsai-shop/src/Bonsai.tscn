@@ -1,0 +1,13 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuvstdjl027sq"]
+
+[ext_resource type="Script" path="res://src/Bonsai.gd" id="1_4cky4"]
+[ext_resource type="PackedScene" uid="uid://b1lmxjcti1u2i" path="res://src/Trunk.tscn" id="2_38hb3"]
+[ext_resource type="PackedScene" uid="uid://b7p4g7lgxqt6p" path="res://src/Leaves.tscn" id="3_4lnvk"]
+[ext_resource type="PackedScene" uid="uid://bpoc0dobvcm66" path="res://src/Flower.tscn" id="4_eyvc6"]
+
+[node name="Bonsai" type="Node2D"]
+show_behind_parent = true
+script = ExtResource("1_4cky4")
+trunk_scene = ExtResource("2_38hb3")
+leaves_scene = ExtResource("3_4lnvk")
+flower_scene = ExtResource("4_eyvc6")

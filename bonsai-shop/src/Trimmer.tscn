@@ -9,4 +9,4 @@ script = ExtResource("1_dti1e")
 cutter_scene = ExtResource("2_v0eyp")
 
 [node name="Mata" parent="." instance=ExtResource("3_4yi4j")]
-position = Vector2(345, 311)
+position = Vector2(410, 288)

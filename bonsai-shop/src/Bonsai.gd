@@ -25,6 +25,7 @@ var leaves_spawnpoints := PackedVector2Array()
 func _ready():
 	var parts := randi_range(MIN_PARTS, MAX_PARTS)
 	generate_trunk(Vector2(0,0), parts)
+	generate_roots()
 	spawn_leaves()
 	if randi() %2 == 0:
 		spawn_flowers()
@@ -47,8 +48,13 @@ func spawn_flowers():
 		add_child(flower)
 		flower.position = flower_position + Vector2(randf_range(-32,32),0)
 
+func generate_roots():
+	generate_trunk(Vector2(0,0), 5, .75*PI, 20, false)
+	generate_trunk(Vector2(0,0), 5, -.75*PI, 20, false)
+	generate_trunk(Vector2(0,0), 5, .75*PI, 20, false)
+	generate_trunk(Vector2(0,0), 5, -.75*PI, 20, false)
 
-func generate_trunk(starting_point: Vector2, parts: int,depth:=0, width:= 30, base_rotation:=0.0):
+func generate_trunk(starting_point: Vector2, parts: int, base_rotation:=0.0,  width:= 30, with_leaves := true, depth:=0):
 	var trunk := trunk_scene.instantiate()
 	trunk.width = width
 	add_child(trunk)
@@ -58,14 +64,15 @@ func generate_trunk(starting_point: Vector2, parts: int,depth:=0, width:= 30, ba
 		var vec := Vector2(0,-SEGMENT_LENGTH).rotated(base_rotation+randf_range(MIN_ANGLE, MAX_ANGLE))
 		last_point += vec
 		trunk_points.append(last_point)
-		if i == parts-1 or (i > parts / 3.0 && randi() % 3 == 0):
+		if with_leaves and (i == parts-1 or (i > parts / 3.0 && randi() % 3 == 0)):
 			leaves_spawnpoints.append(last_point)
 	trunk.points = trunk_points
 	for i in trunk_points.size():
 		if i == 0: continue
 		if depth < 1 and randf() < BRANCH_CHANCE:
 			var point := trunk_points[i]
-			generate_trunk(point, parts-i,depth +1,width_at(point,trunk),((randi()%2)*2-1)*randf_range(MIN_BRANCH_ANGLE,MAX_BRANCH_ANGLE))
+			var angle := ((randi()%2)*2-1)*randf_range(MIN_BRANCH_ANGLE,MAX_BRANCH_ANGLE)
+			generate_trunk(point, parts-i,angle,width_at(point,trunk),with_leaves, depth +1)
 
 func width_at(point:Vector2, line: Line2D):
 	var curve := Curve2D.new()

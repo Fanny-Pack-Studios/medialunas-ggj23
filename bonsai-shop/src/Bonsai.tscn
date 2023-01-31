@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://bpoc0dobvcm66" path="res://src/Flower.tscn" id="4_eyvc6"]
 
 [node name="Bonsai" type="Node2D"]
-show_behind_parent = true
 script = ExtResource("1_4cky4")
 trunk_scene = ExtResource("2_38hb3")
 leaves_scene = ExtResource("3_4lnvk")

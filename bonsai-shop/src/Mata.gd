@@ -30,6 +30,6 @@ func generate_points():
 func cut(new_polygon: PackedVector2Array):
 	var results = Geometry2D.clip_polygons(polygon, new_polygon)
 	for result in results:
-		if Geometry2D.is_point_in_polygon(global_position, result):
+		if Geometry2D.is_point_in_polygon(geo_center, result):
 			polygon = result
 			return

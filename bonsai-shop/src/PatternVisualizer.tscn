@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://q7u7o7m4uw57"]
+
+[ext_resource type="Script" path="res://src/PatternVisualizer.gd" id="1_4s1an"]
+[ext_resource type="Resource" uid="uid://b3wgk3a6xnfyp" path="res://src/Patterns/Square.tres" id="2_emspb"]
+
+[node name="PatternVisualizer" type="Polygon2D"]
+color = Color(0.0313726, 0.686275, 0.6, 0.0577924)
+polygon = PackedVector2Array(80, 72, -3.49691e-06, -8, -80, 72, 9.5399e-07, 152)
+script = ExtResource("1_4s1an")
+pattern = ExtResource("2_emspb")

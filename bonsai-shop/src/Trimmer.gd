@@ -1,6 +1,7 @@
 extends Node2D
 
-@export var cutter_scene :PackedScene
+@export var mata_scene : PackedScene
+@export var cutter_scene : PackedScene
 
 @onready var mata : Polygon2D= $Mata
 
@@ -12,6 +13,23 @@ var cutting := false
 
 var cutters := []
 var cutter_polygon : PackedVector2Array
+
+class PointThreshold:
+	var points : int
+	var message : String
+	func _init(a_points:int, a_message: String):
+		points = a_points 
+		message = a_message
+
+
+var points_thresholds := {
+	800: PointThreshold.new(3,"PERFECT"),
+	1500: PointThreshold.new(2,"GREAT"),
+	2300: PointThreshold.new(1,"GOOD"),
+	3000: PointThreshold.new(0,"POOR"),
+	5000: PointThreshold.new(0,"REALLY BAD!"),
+}
+const LOWER_THRESHOLD_MESSAGE ="DISGUSTING!"
 
 func _ready():
 	reset_points()
@@ -58,3 +76,35 @@ func finish_cutter():
 	show_cutter()
 	mata.cut(cutter_polygon)
 	cutting = false
+
+func area_of_polygon(polygon: PackedVector2Array)->float:
+	var triangle_indices := Geometry2D.triangulate_polygon(polygon)
+	var area := 0.0
+	for i in (triangle_indices.size() / 3.0):
+		var j = i*3
+		var triangle := Triangle.new(polygon[triangle_indices[j]], polygon[triangle_indices[j+1]], polygon[triangle_indices[j+2]])
+		area += triangle.get_area()
+	return area
+
+func area_of_excluded(poly_a:PackedVector2Array,poly_b:PackedVector2Array)->float:
+	var clipped := Geometry2D.clip_polygons(poly_a,poly_b)
+	var area := 0.0
+	for polygon in clipped:
+		area += area_of_polygon(polygon)
+	return area
+
+func plant_done():
+	var target :PackedVector2Array= $PatternVisualizer.polygon
+	var current :PackedVector2Array= $Mata.polygon
+	if not Geometry2D.is_polygon_clockwise(target):
+		target.reverse()
+	if not Geometry2D.is_polygon_clockwise(current):
+		current.reverse()
+	var total_error_area = area_of_excluded(current, target) + area_of_excluded(target, current);
+	var threshold: PointThreshold
+	for value in points_thresholds.keys():
+		if total_error_area < value:
+			threshold = points_thresholds[value]
+			Scoreboard.add_points(threshold.points)
+			break
+	print(threshold.message if threshold else LOWER_THRESHOLD_MESSAGE)

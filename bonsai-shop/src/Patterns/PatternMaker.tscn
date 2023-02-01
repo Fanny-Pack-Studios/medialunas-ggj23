@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://k1sla84gtym5"]
+
+[ext_resource type="Script" path="res://src/Patterns/PatternMaker.gd" id="1_r7bj5"]
+[ext_resource type="PackedScene" uid="uid://d336o1gya87jt" path="res://src/Mata.tscn" id="1_u5s11"]
+
+[node name="Node2D" type="Polygon2D"]
+color = Color(0.45098, 0, 0.176471, 0.537255)
+polygon = PackedVector2Array(73, 69, 27, 6, 0, -6, -26, 7, -75, 71, 0, 146)
+script = ExtResource("1_r7bj5")
+
+[node name="Mata" parent="." instance=ExtResource("1_u5s11")]

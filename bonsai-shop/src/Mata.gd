@@ -1,14 +1,15 @@
+@tool
 extends Polygon2D
 
 const BASE_DISTANCE := 80
-const CENTER_OFFSET := 1.0
+const CENTER_OFFSET := .9
 const ANGLES := 20
 
 @onready var dirt := $Dirt
 
 func _ready():
 	set_shape(generate_points(
-		BASE_DISTANCE, Vector2(0, BASE_DISTANCE)
+		BASE_DISTANCE, Vector2(0, BASE_DISTANCE*CENTER_OFFSET)
 	))
 
 

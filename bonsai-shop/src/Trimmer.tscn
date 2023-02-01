@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnuek13mjmhiy"]
+[gd_scene load_steps=6 format=3 uid="uid://dnuek13mjmhiy"]
 
 [ext_resource type="Script" path="res://src/Trimmer.gd" id="1_dti1e"]
 [ext_resource type="PackedScene" uid="uid://cl08tnu0blikq" path="res://src/Cutter.tscn" id="2_v0eyp"]
 [ext_resource type="PackedScene" uid="uid://d336o1gya87jt" path="res://src/Mata.tscn" id="3_4yi4j"]
+[ext_resource type="PackedScene" uid="uid://q7u7o7m4uw57" path="res://src/PatternVisualizer.tscn" id="4_eu7rg"]
+[ext_resource type="Texture2D" uid="uid://br3rg01spp0n5" path="res://icon.svg" id="5_nsaof"]
 
 [node name="Trimmer" type="Node2D"]
 script = ExtResource("1_dti1e")
@@ -10,3 +12,15 @@ cutter_scene = ExtResource("2_v0eyp")
 
 [node name="Mata" parent="." instance=ExtResource("3_4yi4j")]
 position = Vector2(410, 288)
+
+[node name="PatternVisualizer" parent="." instance=ExtResource("4_eu7rg")]
+position = Vector2(410, 288)
+color = Color(0, 0.654902, 0.803922, 0.223554)
+polygon = PackedVector2Array(73, 69, 27, 6, 0, -6, -26, 7, -75, 71, 0, 146)
+
+[node name="PlantDone" type="TextureButton" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("5_nsaof")
+
+[connection signal="pressed" from="PlantDone" to="." method="plant_done"]

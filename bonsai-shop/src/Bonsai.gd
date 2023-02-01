@@ -1,3 +1,4 @@
+@tool
 extends Node2D
 
 @export var trunk_scene : PackedScene
@@ -24,6 +25,19 @@ const BRANCH_CHANCE := .1
 
 var leaves_spawnpoints := PackedVector2Array()
 @onready var color := trunk_gradient.sample(randf())
+
+func generate_trunk_curve(points := 4)->Curve:
+	var curve := Curve.new()
+	for i in points-1:
+		var midpoint = 1.0 - ((i+1.0)/float(points))
+		curve.add_point(
+			Vector2(
+				i/float(points),
+				randf_range(min(midpoint+.2,1.0),max(midpoint -.2,0.0))
+			)
+		)
+	curve.add_point(Vector2(1.0,0.0))
+	return curve
 
 func _ready():
 	var parts := randi_range(MIN_PARTS, MAX_PARTS)
@@ -62,6 +76,7 @@ func generate_trunk(starting_point: Vector2, parts: int, base_rotation:=0.0,  wi
 	add_child(trunk)
 	trunk.material.set_shader_parameter("base_color",color)
 	trunk.width = width
+	trunk.width_curve = generate_trunk_curve()
 	trunk.material.set_shader_parameter("rotation",wrapf(base_rotation,0,2*PI))
 	var last_point := starting_point
 	var trunk_points := PackedVector2Array([last_point])

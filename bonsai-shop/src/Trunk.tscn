@@ -21,7 +21,7 @@ shader_parameter/rotation = null
 shader_parameter/noise = SubResource("NoiseTexture2D_a5g2q")
 
 [sub_resource type="Curve" id="Curve_k2uqq"]
-_data = [Vector2(0, 0.754545), 0.0, 0.0, 0, 0, Vector2(0.278351, 1), 0.0, 0.0, 0, 0, Vector2(0.654639, 0.645455), 0.0, 0.0, 0, 0, Vector2(1, 0.0454545), -0.597843, 0.0, 0, 0]
+_data = [Vector2(0, 0.727273), 0.0, 0.0, 0, 0, Vector2(0.25, 0.981818), 0.0, 0.0, 0, 0, Vector2(0.654639, 0.645455), 0.0, 0.0, 0, 0, Vector2(1, 0), -0.127273, 0.0, 0, 0]
 point_count = 4
 
 [node name="Trunk" type="Line2D"]

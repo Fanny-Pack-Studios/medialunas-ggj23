@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://pb8yxtatgry"]
+
+[ext_resource type="Script" path="res://src/GameScene.gd" id="1_v5p1t"]
+[ext_resource type="PackedScene" uid="uid://cc7xtham43tpt" path="res://src/Queue.tscn" id="1_wiyka"]
+[ext_resource type="PackedScene" uid="uid://dnuek13mjmhiy" path="res://src/Trimmer.tscn" id="2_lt1ds"]
+
+[node name="GameScene" type="Node2D"]
+script = ExtResource("1_v5p1t")
+
+[node name="Queue" parent="." instance=ExtResource("1_wiyka")]
+position = Vector2(-54, 647)
+scale = Vector2(0.747905, 0.738123)
+visible_in_queue = 10
+
+[node name="Trimmer" parent="." instance=ExtResource("2_lt1ds")]

@@ -14,6 +14,8 @@ var cutting := false
 var cutters := []
 var cutter_polygon : PackedVector2Array
 
+signal plant_finished
+
 class PointThreshold:
 	var points : int
 	var message : String
@@ -27,9 +29,9 @@ var points_thresholds := {
 	1500: PointThreshold.new(2,"GREAT"),
 	2300: PointThreshold.new(1,"GOOD"),
 	3000: PointThreshold.new(0,"POOR"),
-	5000: PointThreshold.new(0,"REALLY BAD!"),
+	5000: PointThreshold.new(0,"REALLY_BAD"),
 }
-const LOWER_THRESHOLD_MESSAGE ="DISGUSTING!"
+const LOWER_THRESHOLD_MESSAGE ="HORRFIC"
 
 func _ready():
 	reset_points()
@@ -95,7 +97,7 @@ func area_of_excluded(poly_a:PackedVector2Array,poly_b:PackedVector2Array)->floa
 
 func plant_done():
 	var target :PackedVector2Array= $PatternVisualizer.polygon
-	var current :PackedVector2Array= $Mata.polygon
+	var current :PackedVector2Array= mata.polygon
 	if not Geometry2D.is_polygon_clockwise(target):
 		target.reverse()
 	if not Geometry2D.is_polygon_clockwise(current):
@@ -108,3 +110,21 @@ func plant_done():
 			Scoreboard.add_points(threshold.points)
 			break
 	print(threshold.message if threshold else LOWER_THRESHOLD_MESSAGE)
+	emit_signal("plant_finished")
+
+func change_plant(new_bonsai):
+	var bonsai_pos = new_bonsai.global_position
+	var bonsai_scale = new_bonsai.global_scale
+	new_bonsai.get_parent().remove_child(new_bonsai)
+	var pos = mata.position
+	mata.queue_free()
+	mata = mata_scene.instantiate()
+	add_child(mata)
+	mata.position = pos
+	mata.add_child(new_bonsai)
+	new_bonsai.global_position = bonsai_pos
+	new_bonsai.global_scale = bonsai_scale
+	await get_tree().process_frame
+	new_bonsai.move_to(mata.to_global(Vector2.ZERO))
+	var tween = create_tween()
+	tween.tween_property(new_bonsai, "global_scale", Vector2(1.0,1.0),.2)

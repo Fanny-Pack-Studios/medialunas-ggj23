@@ -100,3 +100,8 @@ func width_at(point:Vector2, line: Line2D):
 		curve.add_point(p)
 	var offset := curve.get_closest_offset(point) / curve.get_baked_length()
 	return line.width * line.width_curve.sample_baked(offset)
+
+func move_to(to_pos: Vector2):
+	var tween = create_tween()
+	tween.tween_property(self,"global_position", to_pos, .2)
+	tween.play()

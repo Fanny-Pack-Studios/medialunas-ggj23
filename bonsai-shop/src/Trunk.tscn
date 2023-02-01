@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1lmxjcti1u2i"]
+
+[ext_resource type="Shader" path="res://src/Trunk.gdshader" id="1_jv1fa"]
+[ext_resource type="Texture2D" uid="uid://bu3dg050fa3m2" path="res://assets/trunkUV.png" id="1_ko7ud"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_g3fke"]
+frequency = 0.084
+fractal_lacunarity = 2.19
+fractal_gain = 0.604
+fractal_weighted_strength = 0.37
+domain_warp_enabled = true
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_a5g2q"]
+noise = SubResource("FastNoiseLite_g3fke")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_33im7"]
+resource_local_to_scene = true
+shader = ExtResource("1_jv1fa")
+shader_parameter/base_color = Color(0.403922, 0.133333, 0.0431373, 1)
+shader_parameter/rotation = null
+shader_parameter/noise = SubResource("NoiseTexture2D_a5g2q")
+
+[sub_resource type="Curve" id="Curve_k2uqq"]
+_data = [Vector2(0, 0.754545), 0.0, 0.0, 0, 0, Vector2(0.278351, 1), 0.0, 0.0, 0, 0, Vector2(0.654639, 0.645455), 0.0, 0.0, 0, 0, Vector2(1, 0.0454545), -0.597843, 0.0, 0, 0]
+point_count = 4
+
+[node name="Trunk" type="Line2D"]
+material = SubResource("ShaderMaterial_33im7")
+points = PackedVector2Array(1955, 707)
+width = 30.0
+width_curve = SubResource("Curve_k2uqq")
+texture = ExtResource("1_ko7ud")
+texture_mode = 2
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true

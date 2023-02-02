@@ -7,12 +7,14 @@ extends Node2D
 
 const CUT_WIDTH := 2
 const ANGLES := 10
+const AREA_THRESHOLD := 60.0
+const MAX_MOUSE_DISTANCE := 250.0
 
 var points:PackedVector2Array
 var cutting := false
 
 var cutters := []
-var cutter_polygon : PackedVector2Array
+var current_cutter : PackedVector2Array
 
 signal plant_finished
 
@@ -38,25 +40,37 @@ func _ready():
 
 func reset_points():
 	points = PackedVector2Array()
+	current_cutter = PackedVector2Array()
 
-func _process(_delta):
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		add_point_to_cutter()
+var skip_frame :=false
+func _process(delta):
+	skip_frame = !skip_frame
+	if skip_frame:
+		return
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and (mata.global_position-get_viewport().get_mouse_position()).length() < MAX_MOUSE_DISTANCE:
+		add_point_to_cutter(delta)
 		cutting = true
 	elif cutting == true:
 		finish_cutter()
 
-func add_point_to_cutter():
+func add_point_to_cutter(delta:float):
 	var mouse_pos = get_viewport().get_mouse_position()
 	if not cutting:
 		reset_points()
+	var current_area = area_of_polygon(current_cutter)
+	var old_cutter = current_cutter
 	points.append(mouse_pos)
-	show_cutter()
+	current_cutter=cutter_polygon()
+	var next_area = area_of_polygon(current_cutter)
+	if next_area > 100.0 && next_area > current_area+Input.get_last_mouse_velocity().length()*delta*AREA_THRESHOLD*CUT_WIDTH:
+		current_cutter = old_cutter
+		finish_cutter()
+		return
+	$CutterParticles.set_emitting(Geometry2D.is_point_in_polygon(mouse_pos, mata.points_to_global(mata.polygon)))
+	$CutterParticles.global_position = mouse_pos
+	show_cutter(current_cutter)
 
-func show_cutter():
-	for cutter in cutters:
-		cutter.queue_free()
-	cutters = []
+func cutter_polygon()->PackedVector2Array:
 	var final_points := PackedVector2Array(points)
 	var reverse_points := PackedVector2Array()
 	for point in points:
@@ -67,16 +81,22 @@ func show_cutter():
 
 	var polygons = Geometry2D.offset_polygon(final_points, CUT_WIDTH)
 	if polygons.size() == 0:
-		return
+		return PackedVector2Array()
+	return polygons[0]
+
+func show_cutter(poly:PackedVector2Array):
+	for cutter in cutters:
+		cutter.queue_free()
+	cutters = []
 	var cutter = cutter_scene.instantiate()
 	add_child(cutter)
-	cutter_polygon = polygons[0]
-	cutter.polygon = cutter_polygon
+	cutter.polygon = poly
 	cutters.append(cutter)
 
 func finish_cutter():
-	show_cutter()
-	mata.cut(cutter_polygon)
+	show_cutter(current_cutter)
+	mata.cut(current_cutter)
+	$CutterParticles.set_emitting(false)
 	cutting = false
 
 func area_of_polygon(polygon: PackedVector2Array)->float:
@@ -120,6 +140,7 @@ func change_plant(new_bonsai):
 	mata.queue_free()
 	mata = mata_scene.instantiate()
 	add_child(mata)
+	mata.scale = Vector2(.01,.01)
 	mata.position = pos
 	mata.add_child(new_bonsai)
 	new_bonsai.global_position = bonsai_pos
@@ -127,4 +148,5 @@ func change_plant(new_bonsai):
 	await get_tree().process_frame
 	new_bonsai.move_to(mata.to_global(Vector2.ZERO))
 	var tween = create_tween()
-	tween.tween_property(new_bonsai, "global_scale", Vector2(1.0,1.0),.2)
+	tween.tween_property(new_bonsai, "scale", Vector2(1.0,1.0),.2)
+	tween.tween_property(mata, "scale", Vector2(1.0,1.0),.2)

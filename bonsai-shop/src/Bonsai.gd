@@ -114,7 +114,6 @@ func spawn_shadows(trunk_points: PackedVector2Array, width:int):
 	for point in trunk_points:
 		curve.add_point(point)
 	var length = curve.get_baked_length()
-	print(length)
 	for i in int(floor(length / SHADOW_SEPARATION)):
 		var shadow = shadow_scene.instantiate()
 		add_child(shadow)

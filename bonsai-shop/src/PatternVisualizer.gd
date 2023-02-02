@@ -1,7 +1,7 @@
 @tool
 extends Polygon2D
 
-@export var pattern : Pattern : set = set_pattern
+var pattern : Pattern : set = set_pattern
 
 var patterns := {
 	'Crown' : preload("res://src/Patterns/Crown.tres"),
@@ -19,6 +19,9 @@ func set_pattern(new_pattern:Pattern):
 	pattern = new_pattern
 	if new_pattern:
 		polygon = new_pattern.get_points()
+		var line_points = polygon
+		line_points.append(polygon[0]+Vector2(0.01,0.01))
+		$Line2D.points = line_points
 	
 
 var time := 0.0

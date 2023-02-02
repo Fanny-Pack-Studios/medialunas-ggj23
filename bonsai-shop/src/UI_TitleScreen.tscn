@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://wwnvvp71clcp"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Texture2D" uid="uid://c2s27oemud0so" path="res://textures/settings-svgrepo-com.png" id="1_cwh75"]
+[ext_resource type="Texture2D" uid="uid://c2s27oemud0so" path="res://textures/UI_Settings2_icon_svg.png" id="1_cwh75"]
 
 [sub_resource type="Theme" id="Theme_1ek8j"]
 

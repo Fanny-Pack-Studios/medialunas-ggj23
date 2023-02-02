@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/GameScene.gd" id="1_v5p1t"]
 [ext_resource type="PackedScene" uid="uid://cc7xtham43tpt" path="res://src/Queue.tscn" id="1_wiyka"]
-[ext_resource type="PackedScene" uid="uid://1rsugtl3yhch" path="res://src/Medialuna.tscn" id="2_lmhsc"]
+[ext_resource type="PackedScene" path="res://src/Medialuna.tscn" id="2_lmhsc"]
 [ext_resource type="PackedScene" uid="uid://dnuek13mjmhiy" path="res://src/Trimmer.tscn" id="2_lt1ds"]
 [ext_resource type="Script" path="res://src/ScoreLabelUI.gd" id="4_wwrc1"]
 
@@ -28,16 +28,15 @@ visible_in_queue = 10
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_left = 92.0
-offset_top = 52.0
-offset_right = 414.0
-offset_bottom = 189.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
 theme = SubResource("Theme_xu5is")
 script = ExtResource("4_wwrc1")
 
 [node name="Score" type="Label" parent="Control"]
-layout_mode = 0
+layout_mode = 1
 offset_right = 292.0
 offset_bottom = 26.0
 text = "Croassiants: 0"

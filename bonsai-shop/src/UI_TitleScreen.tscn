@@ -1,74 +1,103 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://co3kkjxnac6k0"]
 
-[ext_resource type="Texture2D" uid="uid://c2s27oemud0so" path="res://textures/UI_Settings2_icon_svg.png" id="1_cwh75"]
+[ext_resource type="Script" path="res://src/UI_TitleScreen.gd" id="1_c41tj"]
+
+[sub_resource type="Theme" id="Theme_nct5j"]
+default_font_size = 40
 
 [sub_resource type="Theme" id="Theme_1ek8j"]
 
-[node name="Control" type="Control"]
+[node name="UI_TitleScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_c41tj")
 
-[node name="Button" type="Button" parent="."]
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.319
+offset_left = 456.0
+offset_top = 125.0
+offset_right = -403.0
+offset_bottom = -92.52
+theme_override_font_sizes/font_size = 90
+text = "CAPIBARA BONSAI SHOP"
+
+[node name="PressEnter" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -53.5
-offset_top = -152.0
-offset_right = 53.5
+offset_left = -80.0
+offset_top = -199.0
+offset_right = 82.0
 offset_bottom = -121.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "CLICK TO START"
+theme_override_font_sizes/font_size = 50
+text = "Press ENTER to start"
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="MenuOptions" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
+anchors_preset = -1
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -120.0
-offset_top = -117.0
-offset_right = 264.0
-offset_bottom = 267.0
-grow_horizontal = 0
-grow_vertical = 0
-scale = Vector2(0.2, 0.2)
-texture_normal = ExtResource("1_cwh75")
-texture_pressed = ExtResource("1_cwh75")
-texture_hover = ExtResource("1_cwh75")
-texture_disabled = ExtResource("1_cwh75")
-texture_focused = ExtResource("1_cwh75")
+anchor_bottom = 0.75
+offset_left = 839.0
+offset_top = 42.0
+offset_right = -849.0
+offset_bottom = -92.0
+grow_horizontal = 2
+theme = SubResource("Theme_nct5j")
+theme_override_constants/separation = 15
 
-[node name="Panel" type="Panel" parent="."]
+[node name="NewGame" type="Button" parent="MenuOptions"]
+layout_mode = 2
+text = "NEW GAME"
+
+[node name="Continue" type="Button" parent="MenuOptions"]
+layout_mode = 2
+text = "CONTINUE"
+
+[node name="Settings" type="Button" parent="MenuOptions"]
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="QuitGame" type="Button" parent="MenuOptions"]
+layout_mode = 2
+text = "QUIT"
+
+[node name="SettingsPanel" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -222.0
-offset_top = -225.0
-offset_right = 223.0
+offset_left = -214.0
+offset_top = -87.0
+offset_right = 231.0
 offset_bottom = 254.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Title" type="Label" parent="SettingsPanel"]
 layout_mode = 2
 offset_right = 450.0
 offset_bottom = 26.0
 text = "SETTINGS"
 horizontal_alignment = 1
 
-[node name="MenuBox" type="VBoxContainer" parent="Panel"]
+[node name="Settings" type="VBoxContainer" parent="SettingsPanel"]
 layout_mode = 0
 offset_left = 51.0
 offset_top = 68.0
@@ -77,34 +106,27 @@ offset_bottom = 418.0
 theme = SubResource("Theme_1ek8j")
 theme_override_constants/separation = 30
 
-[node name="MasterVol" type="Label" parent="Panel/MenuBox"]
+[node name="MasterVol" type="Label" parent="SettingsPanel/Settings"]
 layout_mode = 2
 text = "Master Volume"
 horizontal_alignment = 1
 
-[node name="HSlider" type="HSlider" parent="Panel/MenuBox"]
+[node name="HSlider" type="HSlider" parent="SettingsPanel/Settings"]
 layout_mode = 2
 
-[node name="SFXVol" type="Label" parent="Panel/MenuBox"]
+[node name="SFXVol" type="Label" parent="SettingsPanel/Settings"]
 layout_mode = 2
 text = "SFX Volume"
 horizontal_alignment = 1
 
-[node name="HSlider2" type="HSlider" parent="Panel/MenuBox"]
+[node name="HSlider2" type="HSlider" parent="SettingsPanel/Settings"]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="Panel"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -224.5
-offset_top = -97.0
-offset_right = 225.5
-offset_bottom = -71.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="Back" type="Button" parent="SettingsPanel/Settings"]
+layout_mode = 2
 text = "BACK"
-horizontal_alignment = 1
+
+[connection signal="pressed" from="PressEnter" to="." method="_on_press_enter_pressed"]
+[connection signal="pressed" from="MenuOptions/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="MenuOptions/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="SettingsPanel/Settings/Back" to="." method="_on_back_settings_pressed"]

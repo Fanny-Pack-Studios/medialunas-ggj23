@@ -30,6 +30,7 @@ color_ramp = SubResource("GradientTexture1D_sglbo")
 [node name="Trimmer" type="Node2D"]
 script = ExtResource("1_dti1e")
 mata_scene = ExtResource("3_4yi4j")
+pattern_scene = ExtResource("4_eu7rg")
 cutter_scene = ExtResource("2_v0eyp")
 
 [node name="Mata" parent="." instance=ExtResource("3_4yi4j")]
@@ -40,7 +41,7 @@ position = Vector2(1037, 466)
 [node name="PatternVisualizer" parent="." instance=ExtResource("4_eu7rg")]
 z_index = 1
 position = Vector2(1037, 466)
-color = Color(0, 0.654902, 0.803922, 0.220322)
+color = Color(0, 0.654902, 0.803922, 0.249998)
 polygon = PackedVector2Array(73, 69, 27, 6, 0, -6, -26, 7, -75, 71, 0, 146)
 
 [node name="PlantDone" type="TextureButton" parent="."]

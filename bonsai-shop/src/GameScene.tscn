@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://pb8yxtatgry"]
+[gd_scene load_steps=7 format=3 uid="uid://pb8yxtatgry"]
 
 [ext_resource type="Script" path="res://src/GameScene.gd" id="1_v5p1t"]
 [ext_resource type="PackedScene" uid="uid://cc7xtham43tpt" path="res://src/Queue.tscn" id="1_wiyka"]
+[ext_resource type="PackedScene" uid="uid://1rsugtl3yhch" path="res://src/Medialuna.tscn" id="2_lmhsc"]
 [ext_resource type="PackedScene" uid="uid://dnuek13mjmhiy" path="res://src/Trimmer.tscn" id="2_lt1ds"]
 [ext_resource type="Script" path="res://src/ScoreLabelUI.gd" id="4_wwrc1"]
 
@@ -10,6 +11,7 @@ default_font_size = 25
 
 [node name="GameScene" type="Node2D"]
 script = ExtResource("1_v5p1t")
+medialuna_scene = ExtResource("2_lmhsc")
 
 [node name="Queue" parent="." instance=ExtResource("1_wiyka")]
 position = Vector2(-54, 647)

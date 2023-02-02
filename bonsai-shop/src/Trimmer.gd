@@ -1,9 +1,11 @@
 extends Node2D
 
 @export var mata_scene : PackedScene
+@export var pattern_scene : PackedScene
 @export var cutter_scene : PackedScene
 
 @onready var mata : Polygon2D= $Mata
+@onready var pattern : Polygon2D= $PatternVisualizer
 
 const CUT_WIDTH := 2
 const ANGLES := 10
@@ -116,7 +118,7 @@ func area_of_excluded(poly_a:PackedVector2Array,poly_b:PackedVector2Array)->floa
 	return area
 
 func plant_done():
-	var target :PackedVector2Array= $PatternVisualizer.polygon
+	var target :PackedVector2Array= pattern.polygon
 	var current :PackedVector2Array= mata.polygon
 	if not Geometry2D.is_polygon_clockwise(target):
 		target.reverse()
@@ -142,6 +144,12 @@ func change_plant(new_bonsai):
 	add_child(mata)
 	mata.scale = Vector2(.01,.01)
 	mata.position = pos
+
+	pattern.queue_free()
+	pattern = pattern_scene.instantiate()
+	add_child(pattern)
+	pattern.position = pos
+
 	mata.add_child(new_bonsai)
 	new_bonsai.global_position = bonsai_pos
 	new_bonsai.global_scale = bonsai_scale

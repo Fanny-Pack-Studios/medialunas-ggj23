@@ -5,7 +5,8 @@
 
 [node name="Node2D" type="Polygon2D"]
 color = Color(0.45098, 0, 0.176471, 0.537255)
-polygon = PackedVector2Array(73, 69, 27, 6, 0, -6, -26, 7, -75, 71, 0, 146)
+polygon = PackedVector2Array(58, 117, 33, 51, 0, -6, -32, 52, -60, 117)
 script = ExtResource("1_r7bj5")
+metadata/_edit_lock_ = true
 
 [node name="Mata" parent="." instance=ExtResource("1_u5s11")]

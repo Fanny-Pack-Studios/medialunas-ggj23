@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://1rsugtl3yhch"]
+
+[ext_resource type="Texture2D" uid="uid://ba06yj17gptcd" path="res://assets/medialuna.svg" id="1_rdybx"]
+[ext_resource type="Script" path="res://src/Medialuna.gd" id="2_ovbxt"]
+
+[node name="Medialuna" type="Node2D"]
+script = ExtResource("2_ovbxt")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_rdybx")

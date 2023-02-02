@@ -42,3 +42,45 @@ position = Vector2(-14, 5)
 
 [node name="Marker2D8" type="Marker2D" parent="PointsToInclude"]
 position = Vector2(16, 5)
+
+[node name="Marker2D9" type="Marker2D" parent="PointsToInclude"]
+position = Vector2(23, 48)
+
+[node name="Marker2D10" type="Marker2D" parent="PointsToInclude"]
+position = Vector2(-25, 46)
+
+[node name="Marker2D11" type="Marker2D" parent="PointsToInclude"]
+position = Vector2(-12, 63)
+
+[node name="Marker2D12" type="Marker2D" parent="PointsToInclude"]
+position = Vector2(18, 66)
+
+[node name="Marker2D13" type="Marker2D" parent="PointsToInclude"]
+position = Vector2(-30, 65)
+
+[node name="Marker2D14" type="Marker2D" parent="PointsToInclude"]
+position = Vector2(-9, 83)
+
+[node name="Marker2D15" type="Marker2D" parent="PointsToInclude"]
+position = Vector2(11, 83)
+
+[node name="Marker2D16" type="Marker2D" parent="PointsToInclude"]
+position = Vector2(35, 66)
+
+[node name="Marker2D17" type="Marker2D" parent="PointsToInclude"]
+position = Vector2(6, 47)
+
+[node name="Marker2D18" type="Marker2D" parent="PointsToInclude"]
+position = Vector2(16, 38)
+
+[node name="Marker2D19" type="Marker2D" parent="PointsToInclude"]
+position = Vector2(8, 29)
+
+[node name="Marker2D20" type="Marker2D" parent="PointsToInclude"]
+position = Vector2(-9, 27)
+
+[node name="Marker2D21" type="Marker2D" parent="PointsToInclude"]
+position = Vector2(-14, 41)
+
+[node name="Marker2D22" type="Marker2D" parent="PointsToInclude"]
+position = Vector2(-14, 41)

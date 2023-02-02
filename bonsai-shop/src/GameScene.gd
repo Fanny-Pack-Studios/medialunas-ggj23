@@ -17,4 +17,4 @@ func on_score(_new_score:int, new_points: int):
 		add_child(medialuna)
 		medialuna.global_position = mata_pos
 		medialuna.travel(Vector2(0,0))
-		await get_tree().create_timer(medialuna.TIME/2.0)
+		await get_tree().create_timer(medialuna.TIME/2.0).timeout

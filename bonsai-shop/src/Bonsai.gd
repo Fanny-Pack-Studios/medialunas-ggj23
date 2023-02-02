@@ -48,14 +48,20 @@ func _ready():
 		spawn_flowers()
 
 func spawn_leaves():
+	var variation := randi()
+	var hue := lerp(PI, 2*PI,1.0-pow(randf(),4.0));
 	for point in leaves_spawnpoints:
 		var leaves :=leaves_scene.instantiate()
 		add_child(leaves)
+		leaves.set_hue(hue)
+		leaves.set_variation(variation)
 		var leave_scale :=randf_range(.5,1.0)
 		leaves.scale = Vector2(leave_scale,leave_scale)
 		leaves.position = point
 
 func spawn_flowers():
+	var variation := randi()
+	var hue := randf_range(0,2*PI);
 	var amount := min(randi_range(1,leaves_spawnpoints.size()),MAX_FLOWERS)
 	var candidate_positions := Array(leaves_spawnpoints)
 	candidate_positions.shuffle()
@@ -63,6 +69,10 @@ func spawn_flowers():
 		var flower_position :Vector2= candidate_positions[i]
 		var flower:= flower_scene.instantiate()
 		add_child(flower)
+		flower.set_variation(variation)
+		flower.set_hue(hue)
+		flower.rotation = randf_range(0, 2 * PI)
+		flower.scale = randf_range(.8,1.2)*Vector2(.2,.2)
 		flower.position = flower_position + Vector2(randf_range(-32,32),0)
 
 func generate_roots():

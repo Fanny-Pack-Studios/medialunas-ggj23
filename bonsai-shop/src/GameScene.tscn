@@ -10,6 +10,7 @@
 default_font_size = 25
 
 [sub_resource type="Gradient" id="Gradient_g2mbj"]
+offsets = PackedFloat32Array(0, 0.817427)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_84m5c"]
@@ -61,9 +62,10 @@ wait_time = 60.0
 autostart = true
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(1051, 527)
+position = Vector2(1049, 531)
 rotation = 0.155857
 scale = Vector2(4.373, 1119.49)
 color = Color(1, 0.498039, 0.176471, 1)
+energy = 2.0
 texture = SubResource("GradientTexture1D_84m5c")
 texture_scale = 2.0

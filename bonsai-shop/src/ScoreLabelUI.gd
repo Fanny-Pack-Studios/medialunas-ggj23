@@ -6,5 +6,6 @@ extends Control
 
 
 func _process(delta):
-	scoreLabel.text = "Croassiants: %d" %Scoreboard.get_points()
+	scoreLabel.text = "Croissants: %d" %Scoreboard.get_points()
+	partialScoreLabel.text = "Last Earns: %d" %Scoreboard.lastScore
 	timerLabel.text = "Time: %d" %(get_node("/root/GameScene/ActualTimer").get_time_left())

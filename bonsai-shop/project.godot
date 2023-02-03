@@ -30,7 +30,7 @@ window/size/viewport_height=1080
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/extendable_inspector/plugin.cfg")
+enabled=PackedStringArray()
 
 [rendering]
 

@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://co3kkjxnac6k0"]
+[gd_scene load_steps=6 format=3 uid="uid://co3kkjxnac6k0"]
 
 [ext_resource type="Script" path="res://src/UI_TitleScreen.gd" id="1_c41tj"]
+[ext_resource type="FontFile" uid="uid://dxwogwonil3x8" path="res://assets/Fonts/kirby-no-kira-kizzu-brk.regular.ttf" id="2_5hy2d"]
+
+[sub_resource type="Theme" id="Theme_savj4"]
 
 [sub_resource type="Theme" id="Theme_nct5j"]
 default_font_size = 40
@@ -25,6 +28,7 @@ offset_left = 456.0
 offset_top = 125.0
 offset_right = -403.0
 offset_bottom = -92.52
+theme_override_fonts/font = ExtResource("2_5hy2d")
 theme_override_font_sizes/font_size = 90
 text = "CAPIBARA BONSAI SHOP"
 
@@ -41,6 +45,8 @@ offset_right = 82.0
 offset_bottom = -121.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = SubResource("Theme_savj4")
+theme_override_fonts/font = ExtResource("2_5hy2d")
 theme_override_font_sizes/font_size = 50
 text = "Press ENTER to start"
 

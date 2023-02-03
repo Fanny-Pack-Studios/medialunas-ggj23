@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/GameScene.gd" id="1_v5p1t"]
 [ext_resource type="PackedScene" uid="uid://cc7xtham43tpt" path="res://src/Queue.tscn" id="1_wiyka"]
-[ext_resource type="PackedScene" path="res://src/Medialuna.tscn" id="2_lmhsc"]
+[ext_resource type="PackedScene" uid="uid://1rsugtl3yhch" path="res://src/Medialuna.tscn" id="2_lmhsc"]
 [ext_resource type="PackedScene" uid="uid://dnuek13mjmhiy" path="res://src/Trimmer.tscn" id="2_lt1ds"]
 [ext_resource type="Script" path="res://src/ScoreLabelUI.gd" id="4_wwrc1"]
 [ext_resource type="FontFile" uid="uid://dxwogwonil3x8" path="res://assets/Fonts/kirby-no-kira-kizzu-brk.regular.ttf" id="6_l16mo"]
@@ -12,7 +12,7 @@
 default_font_size = 25
 
 [sub_resource type="Gradient" id="Gradient_g2mbj"]
-offsets = PackedFloat32Array(0, 0.817427)
+offsets = PackedFloat32Array(0, 0.966805)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_84m5c"]
@@ -23,9 +23,9 @@ script = ExtResource("1_v5p1t")
 medialuna_scene = ExtResource("2_lmhsc")
 
 [node name="Queue" parent="." instance=ExtResource("1_wiyka")]
-position = Vector2(-54, 647)
+position = Vector2(-85, 807)
 scale = Vector2(0.7, 0.7)
-visible_in_queue = 10
+visible_in_queue = 13
 
 [node name="Trimmer" parent="." instance=ExtResource("2_lt1ds")]
 
@@ -75,16 +75,16 @@ wait_time = 60.0
 autostart = true
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-visible = false
 position = Vector2(1049, 531)
 rotation = 0.155857
 scale = Vector2(4.373, 1119.49)
-color = Color(1, 0.498039, 0.176471, 1)
+color = Color(1, 0.568627, 0.176471, 1)
 energy = 2.0
 texture = SubResource("GradientTexture1D_84m5c")
 texture_scale = 2.0
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+visible = false
 offset_left = 1166.0
 offset_top = 569.0
 offset_right = 1678.0
@@ -94,7 +94,7 @@ script = ExtResource("7_gla5e")
 [node name="Zoom" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
 size_2d_override = Vector2i(256, 256)
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [node name="Node2D" type="Node2D" parent="SubViewportContainer/Zoom"]
 position = Vector2(1037, 466)

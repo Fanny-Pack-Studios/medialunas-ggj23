@@ -43,6 +43,7 @@ func _ready():
 func reset_points():
 	points = PackedVector2Array()
 	current_cutter = PackedVector2Array()
+	show_cutter()
 
 const FRAMES_TO_SKIP := 4
 var skip_frame := 0
@@ -72,7 +73,7 @@ func add_point_to_cutter(delta:float):
 		return
 	$CutterParticles.set_emitting(Geometry2D.is_point_in_polygon(mouse_pos, mata.points_to_global(mata.polygon)))
 	$CutterParticles.global_position = mouse_pos
-	show_cutter(current_cutter)
+	show_cutter()
 
 func cutter_polygon()->PackedVector2Array:
 	var final_points := PackedVector2Array(points)
@@ -88,7 +89,8 @@ func cutter_polygon()->PackedVector2Array:
 		return PackedVector2Array()
 	return polygons[0]
 
-func show_cutter(poly:PackedVector2Array):
+func show_cutter():
+	var poly = current_cutter
 	for cutter in cutters:
 		cutter.queue_free()
 	cutters = []
@@ -98,7 +100,7 @@ func show_cutter(poly:PackedVector2Array):
 	cutters.append(cutter)
 
 func finish_cutter():
-	show_cutter(current_cutter)
+	show_cutter()
 	mata.cut(current_cutter)
 	$CutterParticles.set_emitting(false)
 	cutting = false
@@ -137,6 +139,7 @@ func plant_done():
 	emit_signal("plant_finished")
 
 func change_plant(new_bonsai):
+	reset_points()
 	var bonsai_pos = new_bonsai.global_position
 	var bonsai_scale = new_bonsai.global_scale
 	new_bonsai.get_parent().remove_child(new_bonsai)

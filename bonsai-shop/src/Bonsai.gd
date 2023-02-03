@@ -131,4 +131,3 @@ func width_at(point:Vector2, line: Line2D):
 func move_to(to_pos: Vector2):
 	var tween = create_tween()
 	tween.tween_property(self,"global_position", to_pos, .2)
-	tween.play()

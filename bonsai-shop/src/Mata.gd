@@ -8,9 +8,14 @@ const ANGLES := 40
 @onready var dirt := $Dirt
 
 func _ready():
-	set_shape(generate_points(
-		BASE_DISTANCE, Vector2(0, BASE_DISTANCE*CENTER_OFFSET)
-	))
+	set_shape(
+		base_circle()
+	)
+
+func base_circle(scaled:=1.0)->PackedVector2Array:
+	return generate_points(
+		BASE_DISTANCE*scaled, Vector2(0, BASE_DISTANCE*CENTER_OFFSET)
+	)
 
 
 func generate_points(at_distance: float, center := Vector2(0, 0)) -> PackedVector2Array:
@@ -63,7 +68,4 @@ func points_to_local(new_points: PackedVector2Array):
 
 func set_shape(new_points: PackedVector2Array):
 	polygon = new_points
-	var dirt_polygon := PackedVector2Array()
-	for point in new_points:
-		dirt_polygon.append(point * .95)
-	dirt.polygon = dirt_polygon
+	dirt.set_shape(new_points)

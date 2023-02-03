@@ -1,0 +1,36 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bfyj5ejfcek8a"
+path.s3tc="res://.godot/imported/capy_6.png-5c4ae108f6a0b12305cd101a9bd545d1.s3tc.ctex"
+path.etc2="res://.godot/imported/capy_6.png-5c4ae108f6a0b12305cd101a9bd545d1.etc2.ctex"
+metadata={
+"imported_formats": ["s3tc", "etc2"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://assets/UI/capy/capy_6.png"
+dest_files=["res://.godot/imported/capy_6.png-5c4ae108f6a0b12305cd101a9bd545d1.s3tc.ctex", "res://.godot/imported/capy_6.png-5c4ae108f6a0b12305cd101a9bd545d1.etc2.ctex"]
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/bptc_ldr=0
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://assets/UI/capy/capy_6.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

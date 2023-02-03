@@ -1,0 +1,183 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 14916,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 3065,
+      "max": [
+        0.404609978199005,
+        2.02332711219788,
+        1.05876100063324
+      ],
+      "min": [
+        -0.382203012704849,
+        -0.00207400321960449,
+        -0.456104964017868
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 3065,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 3065,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 3065,
+      "type": "VEC2"
+    }
+  ],
+  "asset": {
+    "generator": "Adobe Substance 3D Painter 8.1.1",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 59664,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 36780,
+      "byteOffset": 59664,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 36780,
+      "byteOffset": 96444,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 49040,
+      "byteOffset": 133224,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 24520,
+      "byteOffset": 182264,
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 206784,
+      "uri": "capy.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "capybara.001_baseColor.png"
+    },
+    {
+      "uri": "capybara.001_occlusionRoughnessMetallic.png"
+    },
+    {
+      "uri": "capybara.001_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "alphaMode": "OPAQUE",
+      "name": "capybara.001",
+      "normalTexture": {
+        "index": 2
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "old_capy.001",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 2,
+            "POSITION": 1,
+            "TANGENT": 3,
+            "TEXCOORD_0": 4
+          },
+          "indices": 0,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "capy.obj"
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "old_capy.001"
+    },
+    {
+      "mesh": 0,
+      "name": "old_capy.001"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9985,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}

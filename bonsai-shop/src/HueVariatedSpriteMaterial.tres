@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c7d71dncm5p8"]
+
+[ext_resource type="Shader" path="res://src/Flower.gdshader" id="1_jtqpl"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_jtqpl")
+shader_parameter/hue_rotated = 0.0

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Pattern" load_steps=2 format=3 uid="uid://chlsefdm23os8"]
+
+[ext_resource type="Script" path="res://src/Pattern.gd" id="1_k6ign"]
+
+[resource]
+script = ExtResource("1_k6ign")
+points = PackedVector2Array(58, 117, 33, 51, 0, -6, -32, 52, -60, 117)

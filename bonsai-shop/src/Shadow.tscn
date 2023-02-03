@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgoop8jrdqt6x"]
+
+[ext_resource type="Script" path="res://src/VariatedSprite.gd" id="1_lwo4j"]
+[ext_resource type="Shader" path="res://src/Flower.gdshader" id="1_v0a57"]
+[ext_resource type="Texture2D" uid="uid://cedo4n0ek7c4p" path="res://assets/shadow2.png" id="2_d0027"]
+[ext_resource type="Texture2D" uid="uid://nhtigf8vjmwf" path="res://assets/shadow.png" id="3_bfefm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vvcj6"]
+resource_local_to_scene = true
+shader = ExtResource("1_v0a57")
+shader_parameter/hue_rotated = 0.0
+
+[node name="Shadow" type="Sprite2D"]
+show_behind_parent = true
+material = SubResource("ShaderMaterial_vvcj6")
+scale = Vector2(1, 0.979789)
+texture = ExtResource("2_d0027")
+script = ExtResource("1_lwo4j")
+variations = [ExtResource("2_d0027"), ExtResource("3_bfefm")]

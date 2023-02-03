@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc7xtham43tpt"]
+
+[ext_resource type="Script" path="res://src/Queue.gd" id="1_g0fua"]
+[ext_resource type="PackedScene" uid="uid://cuvstdjl027sq" path="res://src/Bonsai.tscn" id="2_3qoyk"]
+
+[node name="Queue" type="Node2D"]
+position = Vector2(2, 600)
+script = ExtResource("1_g0fua")
+bonsai_scene = ExtResource("2_3qoyk")

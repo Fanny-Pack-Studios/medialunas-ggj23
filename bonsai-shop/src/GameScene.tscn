@@ -1,0 +1,104 @@
+[gd_scene load_steps=11 format=3 uid="uid://pb8yxtatgry"]
+
+[ext_resource type="Script" path="res://src/GameScene.gd" id="1_v5p1t"]
+[ext_resource type="PackedScene" uid="uid://cc7xtham43tpt" path="res://src/Queue.tscn" id="1_wiyka"]
+[ext_resource type="PackedScene" path="res://src/Medialuna.tscn" id="2_lmhsc"]
+[ext_resource type="PackedScene" uid="uid://dnuek13mjmhiy" path="res://src/Trimmer.tscn" id="2_lt1ds"]
+[ext_resource type="Script" path="res://src/ScoreLabelUI.gd" id="4_wwrc1"]
+[ext_resource type="FontFile" uid="uid://dxwogwonil3x8" path="res://assets/Fonts/kirby-no-kira-kizzu-brk.regular.ttf" id="6_l16mo"]
+[ext_resource type="Script" path="res://src/ZoomContainer.gd" id="7_gla5e"]
+
+[sub_resource type="Theme" id="Theme_xu5is"]
+default_font_size = 25
+
+[sub_resource type="Gradient" id="Gradient_g2mbj"]
+offsets = PackedFloat32Array(0, 0.817427)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_84m5c"]
+gradient = SubResource("Gradient_g2mbj")
+
+[node name="GameScene" type="Node2D"]
+script = ExtResource("1_v5p1t")
+medialuna_scene = ExtResource("2_lmhsc")
+
+[node name="Queue" parent="." instance=ExtResource("1_wiyka")]
+position = Vector2(-54, 647)
+scale = Vector2(0.7, 0.7)
+visible_in_queue = 10
+
+[node name="Trimmer" parent="." instance=ExtResource("2_lt1ds")]
+
+[node name="GameUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+theme = SubResource("Theme_xu5is")
+script = ExtResource("4_wwrc1")
+
+[node name="Score" type="Label" parent="GameUI"]
+layout_mode = 1
+offset_left = 56.0
+offset_top = 43.0
+offset_right = 348.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0.643137, 0.494118, 0.00784314, 1)
+theme_override_fonts/font = ExtResource("6_l16mo")
+theme_override_font_sizes/font_size = 50
+text = "Croissants: 0"
+
+[node name="Score2" type="Label" parent="GameUI"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 114.0
+offset_right = 471.0
+offset_bottom = 162.0
+theme_override_colors/font_color = Color(0.643137, 0.494118, 0.00784314, 1)
+theme_override_fonts/font = ExtResource("6_l16mo")
+theme_override_font_sizes/font_size = 50
+text = "Last Reward: 0"
+
+[node name="Timer" type="Label" parent="GameUI"]
+layout_mode = 0
+offset_left = 824.0
+offset_top = 43.0
+offset_right = 1116.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("6_l16mo")
+theme_override_font_sizes/font_size = 50
+text = "Time: 0"
+
+[node name="ActualTimer" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(1049, 531)
+rotation = 0.155857
+scale = Vector2(4.373, 1119.49)
+color = Color(1, 0.498039, 0.176471, 1)
+energy = 2.0
+texture = SubResource("GradientTexture1D_84m5c")
+texture_scale = 2.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_left = 1166.0
+offset_top = 569.0
+offset_right = 1678.0
+offset_bottom = 1081.0
+script = ExtResource("7_gla5e")
+
+[node name="Zoom" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size_2d_override = Vector2i(256, 256)
+render_target_update_mode = 4
+
+[node name="Node2D" type="Node2D" parent="SubViewportContainer/Zoom"]
+position = Vector2(1037, 466)
+
+[node name="Camera2D" type="Camera2D" parent="SubViewportContainer/Zoom/Node2D"]
+current = true
+zoom = Vector2(5, 5)

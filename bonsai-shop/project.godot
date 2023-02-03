@@ -11,15 +11,28 @@ config_version=5
 [application]
 
 config/name="Bonsai-shop"
-run/main_scene="res://src/Trimmer.tscn"
+run/main_scene="res://src/UI_TitleScreen.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Scoreboard="*res://src/Scoreboard.gd"
+
+[debug]
+
+settings/stdout/print_fps=true
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 
+[editor_plugins]
+
+enabled=PackedStringArray()
+
 [rendering]
 
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0.0313726, 0.215686, 0.25098, 1)

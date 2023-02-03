@@ -1,6 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpoc0dobvcm66"]
+[gd_scene load_steps=6 format=3 uid="uid://bpoc0dobvcm66"]
 
+[ext_resource type="Shader" path="res://src/Flower.gdshader" id="1_6daad"]
 [ext_resource type="Texture2D" uid="uid://1l4ihfjwmjoc" path="res://assets/flower.png" id="1_rayfj"]
+[ext_resource type="Script" path="res://src/VariatedSprite.gd" id="3_het35"]
+[ext_resource type="Texture2D" uid="uid://dsm38t5dm4hwp" path="res://assets/flower2.png" id="4_uv6nf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_omyu1"]
+resource_local_to_scene = true
+shader = ExtResource("1_6daad")
+shader_parameter/hue_rotated = 0.0
 
 [node name="Flower" type="Sprite2D"]
-texture = ExtResource("1_rayfj")
+material = SubResource("ShaderMaterial_omyu1")
+scale = Vector2(0.4, 0.4)
+script = ExtResource("3_het35")
+variations = [ExtResource("4_uv6nf"), ExtResource("1_rayfj")]

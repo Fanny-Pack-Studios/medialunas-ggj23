@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnkv5ttf3pv1b"
-path="res://.godot/imported/dirtbag_Roughness.png-be9fa5bf6aa8f7110f05d16ccc2de5a5.ctex"
+path="res://.godot/imported/dirtbag_Roughness.png-d58e5a99965a361b18693b901534f6e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/dirtbag_Roughness.png"
-dest_files=["res://.godot/imported/dirtbag_Roughness.png-be9fa5bf6aa8f7110f05d16ccc2de5a5.ctex"]
+source_file="res://assets/textures/dirtbag_Roughness.png"
+dest_files=["res://.godot/imported/dirtbag_Roughness.png-d58e5a99965a361b18693b901534f6e1.ctex"]
 
 [params]
 

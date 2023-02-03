@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvm6i2om27s82"
-path="res://.godot/imported/regadera_Normal_OpenGL.png-5b3fb7869cfdf3f60d5d58bc520819b9.ctex"
+path="res://.godot/imported/regadera_Normal_OpenGL.png-1be0c4ef63e480b2b57fb49f091ad5cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/regadera_Normal_OpenGL.png"
-dest_files=["res://.godot/imported/regadera_Normal_OpenGL.png-5b3fb7869cfdf3f60d5d58bc520819b9.ctex"]
+source_file="res://assets/textures/regadera_Normal_OpenGL.png"
+dest_files=["res://.godot/imported/regadera_Normal_OpenGL.png-1be0c4ef63e480b2b57fb49f091ad5cb.ctex"]
 
 [params]
 

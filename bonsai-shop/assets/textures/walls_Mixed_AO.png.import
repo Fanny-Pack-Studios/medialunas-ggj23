@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8da3xo8wtc4g"
-path="res://.godot/imported/walls_Mixed_AO.png-1a0db0865090cdb4fb1e65739862f7e1.ctex"
+path="res://.godot/imported/walls_Mixed_AO.png-e3dbfff8ffd1c99c58946c1452fe65a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/walls_Mixed_AO.png"
-dest_files=["res://.godot/imported/walls_Mixed_AO.png-1a0db0865090cdb4fb1e65739862f7e1.ctex"]
+source_file="res://assets/textures/walls_Mixed_AO.png"
+dest_files=["res://.godot/imported/walls_Mixed_AO.png-e3dbfff8ffd1c99c58946c1452fe65a6.ctex"]
 
 [params]
 

@@ -3,11 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://00rog2pa73k3"
-valid=false
+path="res://.godot/imported/steel_frame_shelves_02_rough.jpg-e652720e1362e684550baebe931903e1.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://assets/textures/steel_frame_shelves_02_rough.jpg"
+dest_files=["res://.godot/imported/steel_frame_shelves_02_rough.jpg-e652720e1362e684550baebe931903e1.ctex"]
+
 [params]
 
 compress/mode=0

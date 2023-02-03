@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctqeni68kvkcb"
-path="res://.godot/imported/regadera_Roughness.png-c71536ad3d0acd498128dae1c4b19812.ctex"
+path="res://.godot/imported/regadera_Roughness.png-52fe41b44a6c34b67d960c357069ce35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/regadera_Roughness.png"
-dest_files=["res://.godot/imported/regadera_Roughness.png-c71536ad3d0acd498128dae1c4b19812.ctex"]
+source_file="res://assets/textures/regadera_Roughness.png"
+dest_files=["res://.godot/imported/regadera_Roughness.png-52fe41b44a6c34b67d960c357069ce35.ctex"]
 
 [params]
 

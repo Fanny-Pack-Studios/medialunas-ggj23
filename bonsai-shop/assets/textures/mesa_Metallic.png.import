@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://rdjh8p0cbrrn"
-path="res://.godot/imported/mesa_Metallic.png-752920e4bdbde2fa917913b12d2ae398.ctex"
+path="res://.godot/imported/mesa_Metallic.png-fd658ab554445b8326f8da7e2c997d1a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/mesa_Metallic.png"
-dest_files=["res://.godot/imported/mesa_Metallic.png-752920e4bdbde2fa917913b12d2ae398.ctex"]
+source_file="res://assets/textures/mesa_Metallic.png"
+dest_files=["res://.godot/imported/mesa_Metallic.png-fd658ab554445b8326f8da7e2c997d1a.ctex"]
 
 [params]
 

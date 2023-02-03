@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lgbh55x1i7lk"
-path="res://.godot/imported/M_Props_01_metallicRoughness.png-7b265a1891bd1eb3ec3ae0669b37fbb9.ctex"
+path="res://.godot/imported/M_Props_01_metallicRoughness.png-ea91d6c0a29aedb60afb7da7fe5d334d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/M_Props_01_metallicRoughness.png"
-dest_files=["res://.godot/imported/M_Props_01_metallicRoughness.png-7b265a1891bd1eb3ec3ae0669b37fbb9.ctex"]
+source_file="res://assets/textures/M_Props_01_metallicRoughness.png"
+dest_files=["res://.godot/imported/M_Props_01_metallicRoughness.png-ea91d6c0a29aedb60afb7da7fe5d334d.ctex"]
 
 [params]
 

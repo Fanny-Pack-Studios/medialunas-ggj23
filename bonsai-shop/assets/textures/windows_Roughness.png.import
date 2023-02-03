@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dukdb548jcwk4"
-path="res://.godot/imported/windows_Roughness.png-d8a57055774adfad4c72bcdb7a8c28c8.ctex"
+path="res://.godot/imported/windows_Roughness.png-a1c172a7caf01383199483e778c70ed8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/windows_Roughness.png"
-dest_files=["res://.godot/imported/windows_Roughness.png-d8a57055774adfad4c72bcdb7a8c28c8.ctex"]
+source_file="res://assets/textures/windows_Roughness.png"
+dest_files=["res://.godot/imported/windows_Roughness.png-a1c172a7caf01383199483e778c70ed8.ctex"]
 
 [params]
 

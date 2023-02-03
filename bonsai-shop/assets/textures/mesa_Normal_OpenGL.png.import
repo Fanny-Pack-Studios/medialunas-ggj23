@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckjlv5p2ks1m"
-path="res://.godot/imported/mesa_Normal_OpenGL.png-589fa32c85a3537c8bf0998afb680d86.ctex"
+path="res://.godot/imported/mesa_Normal_OpenGL.png-1cf9bc45cb296f1b410b00efffa78199.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/mesa_Normal_OpenGL.png"
-dest_files=["res://.godot/imported/mesa_Normal_OpenGL.png-589fa32c85a3537c8bf0998afb680d86.ctex"]
+source_file="res://assets/textures/mesa_Normal_OpenGL.png"
+dest_files=["res://.godot/imported/mesa_Normal_OpenGL.png-1cf9bc45cb296f1b410b00efffa78199.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dinydgfxbvs2"
-path="res://.godot/imported/dirtbag_Normal_OpenGL.png-3adf5da312ff166add82092b013a4f13.ctex"
+path="res://.godot/imported/dirtbag_Normal_OpenGL.png-761025f30cc1d4b94023102d5698ea69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/dirtbag_Normal_OpenGL.png"
-dest_files=["res://.godot/imported/dirtbag_Normal_OpenGL.png-3adf5da312ff166add82092b013a4f13.ctex"]
+source_file="res://assets/textures/dirtbag_Normal_OpenGL.png"
+dest_files=["res://.godot/imported/dirtbag_Normal_OpenGL.png-761025f30cc1d4b94023102d5698ea69.ctex"]
 
 [params]
 

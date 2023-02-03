@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0tah6hyexn64"
-path="res://.godot/imported/dirtbag_Base_color.png-477d735642bf621ef5ebbc5b1325f35f.ctex"
+path="res://.godot/imported/dirtbag_Base_color.png-175441428973ba3fcaeba91794201315.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/dirtbag_Base_color.png"
-dest_files=["res://.godot/imported/dirtbag_Base_color.png-477d735642bf621ef5ebbc5b1325f35f.ctex"]
+source_file="res://assets/textures/dirtbag_Base_color.png"
+dest_files=["res://.godot/imported/dirtbag_Base_color.png-175441428973ba3fcaeba91794201315.ctex"]
 
 [params]
 

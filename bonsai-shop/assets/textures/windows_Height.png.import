@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://o270kqf85qwx"
-path="res://.godot/imported/windows_Height.png-ba48080f2083f54f597d42a20ae86aa1.ctex"
+path="res://.godot/imported/windows_Height.png-24ca47bebbe01b4aea784589f520a721.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/windows_Height.png"
-dest_files=["res://.godot/imported/windows_Height.png-ba48080f2083f54f597d42a20ae86aa1.ctex"]
+source_file="res://assets/textures/windows_Height.png"
+dest_files=["res://.godot/imported/windows_Height.png-24ca47bebbe01b4aea784589f520a721.ctex"]
 
 [params]
 

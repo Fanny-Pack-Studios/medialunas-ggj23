@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8rbo54dvg1at"
-path="res://.godot/imported/regadera_Normal.png-0645fe6dd170d267945859d6003461fc.ctex"
+path="res://.godot/imported/regadera_Normal.png-4f14cf100997f4d0df3af3679d81a348.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/regadera_Normal.png"
-dest_files=["res://.godot/imported/regadera_Normal.png-0645fe6dd170d267945859d6003461fc.ctex"]
+source_file="res://assets/textures/regadera_Normal.png"
+dest_files=["res://.godot/imported/regadera_Normal.png-4f14cf100997f4d0df3af3679d81a348.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8xyngrajmerd"
-path="res://.godot/imported/mesa_Normal.png-adaea5210fb58fd8a99edab964c1524e.ctex"
+path="res://.godot/imported/mesa_Normal.png-ad842bbb879beed5d73ed05bcefdc7ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/mesa_Normal.png"
-dest_files=["res://.godot/imported/mesa_Normal.png-adaea5210fb58fd8a99edab964c1524e.ctex"]
+source_file="res://assets/textures/mesa_Normal.png"
+dest_files=["res://.godot/imported/mesa_Normal.png-ad842bbb879beed5d73ed05bcefdc7ba.ctex"]
 
 [params]
 

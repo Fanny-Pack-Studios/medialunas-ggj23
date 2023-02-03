@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://to1xx40jhxtp"
-path="res://.godot/imported/PineTree_Bark.png-94657ddf5dbcc382eb2f3302f0ffc576.ctex"
+path="res://.godot/imported/PineTree_Bark.png-038d41d19ee3761bf057686710791e5e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/PineTree_Bark.png"
-dest_files=["res://.godot/imported/PineTree_Bark.png-94657ddf5dbcc382eb2f3302f0ffc576.ctex"]
+source_file="res://assets/textures/PineTree_Bark.png"
+dest_files=["res://.godot/imported/PineTree_Bark.png-038d41d19ee3761bf057686710791e5e.ctex"]
 
 [params]
 

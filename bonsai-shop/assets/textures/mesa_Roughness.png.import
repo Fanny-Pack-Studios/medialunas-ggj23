@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://wet5umcviok2"
-path="res://.godot/imported/mesa_Roughness.png-0803742972dca40beedd8e00c06ffb4c.ctex"
+path="res://.godot/imported/mesa_Roughness.png-bb8739d948ca3cf434d6476a3bfa40e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/mesa_Roughness.png"
-dest_files=["res://.godot/imported/mesa_Roughness.png-0803742972dca40beedd8e00c06ffb4c.ctex"]
+source_file="res://assets/textures/mesa_Roughness.png"
+dest_files=["res://.godot/imported/mesa_Roughness.png-bb8739d948ca3cf434d6476a3bfa40e0.ctex"]
 
 [params]
 

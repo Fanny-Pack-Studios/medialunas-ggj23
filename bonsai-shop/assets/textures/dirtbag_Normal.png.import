@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7ocsancyoca3"
-path="res://.godot/imported/dirtbag_Normal.png-2f823718a7833c2e7c5825d5c0509a57.ctex"
+path="res://.godot/imported/dirtbag_Normal.png-8296e9a23637fda19064a1c6c71514f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/dirtbag_Normal.png"
-dest_files=["res://.godot/imported/dirtbag_Normal.png-2f823718a7833c2e7c5825d5c0509a57.ctex"]
+source_file="res://assets/textures/dirtbag_Normal.png"
+dest_files=["res://.godot/imported/dirtbag_Normal.png-8296e9a23637fda19064a1c6c71514f0.ctex"]
 
 [params]
 

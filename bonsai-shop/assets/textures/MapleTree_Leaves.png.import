@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcihjybu2pxng"
-path="res://.godot/imported/MapleTree_Leaves.png-48fd238dbf55dffccfeaea7564aac8c7.ctex"
+path="res://.godot/imported/MapleTree_Leaves.png-b999dfe0ce572fcca6a6aa87f29704b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/MapleTree_Leaves.png"
-dest_files=["res://.godot/imported/MapleTree_Leaves.png-48fd238dbf55dffccfeaea7564aac8c7.ctex"]
+source_file="res://assets/textures/MapleTree_Leaves.png"
+dest_files=["res://.godot/imported/MapleTree_Leaves.png-b999dfe0ce572fcca6a6aa87f29704b1.ctex"]
 
 [params]
 

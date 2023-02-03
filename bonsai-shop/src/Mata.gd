@@ -3,7 +3,7 @@ extends Polygon2D
 
 const BASE_DISTANCE := 80
 const CENTER_OFFSET := .9
-const ANGLES := 20
+const ANGLES := 40
 
 @onready var dirt := $Dirt
 
@@ -32,11 +32,11 @@ func cut(new_polygon: PackedVector2Array):
 		for point in $PointsToInclude.get_children():
 			if(Geometry2D.is_point_in_polygon(point.global_position, results[i])):
 				scores[i] += 1
-	var max := 0
+	var max_score := 0
 	var idx := 0
 	for i in scores.size():
-		if scores[i] > max:
-			max = scores[i]
+		if scores[i] > max_score:
+			max_score = scores[i]
 			idx = i
 	set_shape(points_to_local(results[idx]))
 

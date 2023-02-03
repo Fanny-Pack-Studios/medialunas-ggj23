@@ -1,18 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7p4g7lgxqt6p"]
+[gd_scene load_steps=8 format=3 uid="uid://b7p4g7lgxqt6p"]
 
 [ext_resource type="Texture2D" uid="uid://bdvs787a4yocq" path="res://assets/leaves.png" id="1_owyaj"]
 [ext_resource type="Shader" path="res://src/Flower.gdshader" id="1_s005y"]
 [ext_resource type="Script" path="res://src/VariatedSprite.gd" id="2_t643w"]
 [ext_resource type="Texture2D" uid="uid://btl4tbuso2djd" path="res://assets/leaves2.png" id="4_jjjn0"]
+[ext_resource type="Texture2D" uid="uid://byfqgl3uc8orh" path="res://assets/leaves3.png" id="5_iq2cw"]
+[ext_resource type="Texture2D" uid="uid://bnx3d1dxpbwfd" path="res://assets/leaves4.png" id="6_t2hgu"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_anj35"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iulb1"]
 resource_local_to_scene = true
 shader = ExtResource("1_s005y")
 shader_parameter/hue_rotated = 0.0
 
 [node name="Leaves" type="Sprite2D"]
-material = SubResource("ShaderMaterial_anj35")
+material = SubResource("ShaderMaterial_iulb1")
 scale = Vector2(1.0031, 0.990566)
 texture = ExtResource("4_jjjn0")
 script = ExtResource("2_t643w")
-variations = [ExtResource("1_owyaj"), ExtResource("4_jjjn0")]
+variations = [ExtResource("1_owyaj"), ExtResource("4_jjjn0"), ExtResource("5_iq2cw"), ExtResource("6_t2hgu")]

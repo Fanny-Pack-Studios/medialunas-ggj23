@@ -44,10 +44,12 @@ func reset_points():
 	points = PackedVector2Array()
 	current_cutter = PackedVector2Array()
 
-var skip_frame :=false
+const FRAMES_TO_SKIP := 4
+var skip_frame := 0
 func _process(delta):
-	skip_frame = !skip_frame
-	if skip_frame:
+	skip_frame += 1
+	skip_frame %= FRAMES_TO_SKIP
+	if skip_frame != 0:
 		return
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and (mata.global_position-get_viewport().get_mouse_position()).length() < MAX_MOUSE_DISTANCE:
 		add_point_to_cutter(delta)

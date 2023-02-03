@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://pb8yxtatgry"]
+[gd_scene load_steps=11 format=3 uid="uid://pb8yxtatgry"]
 
 [ext_resource type="Script" path="res://src/GameScene.gd" id="1_v5p1t"]
 [ext_resource type="PackedScene" uid="uid://cc7xtham43tpt" path="res://src/Queue.tscn" id="1_wiyka"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dnuek13mjmhiy" path="res://src/Trimmer.tscn" id="2_lt1ds"]
 [ext_resource type="Script" path="res://src/ScoreLabelUI.gd" id="4_wwrc1"]
 [ext_resource type="FontFile" uid="uid://dxwogwonil3x8" path="res://assets/Fonts/kirby-no-kira-kizzu-brk.regular.ttf" id="6_l16mo"]
+[ext_resource type="Script" path="res://src/ZoomContainer.gd" id="7_gla5e"]
 
 [sub_resource type="Theme" id="Theme_xu5is"]
 default_font_size = 25
@@ -82,3 +83,22 @@ color = Color(1, 0.498039, 0.176471, 1)
 energy = 2.0
 texture = SubResource("GradientTexture1D_84m5c")
 texture_scale = 2.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_left = 1166.0
+offset_top = 569.0
+offset_right = 1678.0
+offset_bottom = 1081.0
+script = ExtResource("7_gla5e")
+
+[node name="Zoom" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size_2d_override = Vector2i(256, 256)
+render_target_update_mode = 4
+
+[node name="Node2D" type="Node2D" parent="SubViewportContainer/Zoom"]
+position = Vector2(1037, 466)
+
+[node name="Camera2D" type="Camera2D" parent="SubViewportContainer/Zoom/Node2D"]
+current = true
+zoom = Vector2(5, 5)

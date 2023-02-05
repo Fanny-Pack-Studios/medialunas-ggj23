@@ -42,8 +42,8 @@ polygon = PackedVector2Array(80, 72, 79.0151, 59.4852, 76.0845, 47.2786, 71.2805
 [node name="PatternVisualizer" parent="." instance=ExtResource("4_eu7rg")]
 z_index = 1
 position = Vector2(1037, 466)
-color = Color(0.556863, 0.0196078, 0, 0.230976)
-polygon = PackedVector2Array(58, 117, 33, 51, 0, -6, -32, 52, -60, 117)
+color = Color(0, 0.34902, 0.172549, 0.239159)
+polygon = PackedVector2Array(73, 69, 27, 6, 0, -6, -26, 7, -75, 71, 0, 146)
 
 [node name="PlantDone" type="TextureButton" parent="."]
 offset_left = 1637.0

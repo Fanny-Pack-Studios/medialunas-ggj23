@@ -1,14 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://co3kkjxnac6k0"]
+[gd_scene load_steps=9 format=3 uid="uid://co3kkjxnac6k0"]
 
 [ext_resource type="Script" path="res://src/UI_TitleScreen.gd" id="1_c41tj"]
 [ext_resource type="FontFile" uid="uid://dxwogwonil3x8" path="res://assets/Fonts/kirby-no-kira-kizzu-brk.regular.ttf" id="2_5hy2d"]
+[ext_resource type="Texture2D" uid="uid://8wrp7f4rld80" path="res://assets/UI/UI Assets/pantalla_inicial.png" id="3_nii1g"]
+[ext_resource type="Texture2D" uid="uid://dxpftuk4ranwq" path="res://assets/UI/UI Assets/menu.png" id="4_7egkp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n00q1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yttra"]
 
 [sub_resource type="Theme" id="Theme_savj4"]
+Button/styles/hover = SubResource("StyleBoxEmpty_n00q1")
+Button/styles/normal = SubResource("StyleBoxEmpty_yttra")
 
 [sub_resource type="Theme" id="Theme_nct5j"]
 default_font_size = 40
-
-[sub_resource type="Theme" id="Theme_1ek8j"]
 
 [node name="UI_TitleScreen" type="Control"]
 layout_mode = 3
@@ -19,19 +25,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_c41tj")
 
-[node name="Title" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 0.319
-offset_left = 456.0
-offset_top = 125.0
-offset_right = -403.0
-offset_bottom = -92.52
-theme_override_fonts/font = ExtResource("2_5hy2d")
-theme_override_font_sizes/font_size = 90
-text = "CAPIBARA BONSAI SHOP"
-
 [node name="PressEnter" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 7
@@ -39,21 +32,21 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -80.0
-offset_top = -199.0
-offset_right = 82.0
-offset_bottom = -121.0
+offset_left = -198.0
+offset_top = -295.0
+offset_right = 224.0
+offset_bottom = -68.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = SubResource("Theme_savj4")
 theme_override_fonts/font = ExtResource("2_5hy2d")
 theme_override_font_sizes/font_size = 50
-text = "Press ENTER to start"
+text = "
+"
 
-[node name="MenuOptions" type="VBoxContainer" parent="."]
+[node name="MenuOptions" type="Control" parent="."]
 visible = false
 layout_mode = 1
-anchors_preset = -1
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.75
@@ -63,76 +56,45 @@ offset_right = -849.0
 offset_bottom = -92.0
 grow_horizontal = 2
 theme = SubResource("Theme_nct5j")
-theme_override_constants/separation = 15
 
 [node name="NewGame" type="Button" parent="MenuOptions"]
 layout_mode = 2
-text = "NEW GAME"
+offset_left = -76.0
+offset_top = -486.0
+offset_right = 357.0
+offset_bottom = -271.0
+theme = SubResource("Theme_savj4")
 
 [node name="Continue" type="Button" parent="MenuOptions"]
 layout_mode = 2
-text = "CONTINUE"
-
-[node name="Settings" type="Button" parent="MenuOptions"]
-layout_mode = 2
-text = "SETTINGS"
+offset_left = -67.0
+offset_top = -139.0
+offset_right = 356.0
+offset_bottom = 70.0
+theme = SubResource("Theme_savj4")
 
 [node name="QuitGame" type="Button" parent="MenuOptions"]
 layout_mode = 2
-text = "QUIT"
+offset_left = -73.0
+offset_top = 190.0
+offset_right = 352.0
+offset_bottom = 386.0
+theme = SubResource("Theme_savj4")
 
-[node name="SettingsPanel" type="Panel" parent="."]
+[node name="PantallaInicial" type="Sprite2D" parent="."]
+position = Vector2(964.5, 538)
+scale = Vector2(0.239125, 0.240889)
+texture = ExtResource("3_nii1g")
+metadata/_edit_lock_ = true
+
+[node name="Menu" type="Sprite2D" parent="."]
 visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -214.0
-offset_top = -87.0
-offset_right = 231.0
-offset_bottom = 254.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Title" type="Label" parent="SettingsPanel"]
-layout_mode = 2
-offset_right = 450.0
-offset_bottom = 26.0
-text = "SETTINGS"
-horizontal_alignment = 1
-
-[node name="Settings" type="VBoxContainer" parent="SettingsPanel"]
-layout_mode = 0
-offset_left = 51.0
-offset_top = 68.0
-offset_right = 392.0
-offset_bottom = 418.0
-theme = SubResource("Theme_1ek8j")
-theme_override_constants/separation = 30
-
-[node name="MasterVol" type="Label" parent="SettingsPanel/Settings"]
-layout_mode = 2
-text = "Master Volume"
-horizontal_alignment = 1
-
-[node name="HSlider" type="HSlider" parent="SettingsPanel/Settings"]
-layout_mode = 2
-
-[node name="SFXVol" type="Label" parent="SettingsPanel/Settings"]
-layout_mode = 2
-text = "SFX Volume"
-horizontal_alignment = 1
-
-[node name="HSlider2" type="HSlider" parent="SettingsPanel/Settings"]
-layout_mode = 2
-
-[node name="Back" type="Button" parent="SettingsPanel/Settings"]
-layout_mode = 2
-text = "BACK"
+position = Vector2(964.5, 538)
+scale = Vector2(0.239125, 0.240889)
+texture = ExtResource("4_7egkp")
+metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="PressEnter" to="." method="_on_press_enter_pressed"]
 [connection signal="pressed" from="MenuOptions/NewGame" to="." method="_on_new_game_pressed"]
-[connection signal="pressed" from="MenuOptions/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="SettingsPanel/Settings/Back" to="." method="_on_back_settings_pressed"]
+[connection signal="pressed" from="MenuOptions/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="MenuOptions/QuitGame" to="." method="_on_quit_game_pressed"]

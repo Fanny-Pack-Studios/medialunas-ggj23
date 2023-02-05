@@ -42,7 +42,7 @@ position = Vector2(1037, 466)
 [node name="PatternVisualizer" parent="." instance=ExtResource("4_eu7rg")]
 z_index = 1
 position = Vector2(1037, 466)
-color = Color(0, 0.34902, 0.172549, 0.137433)
+color = Color(0, 0.34902, 0.172549, 0.12313)
 polygon = PackedVector2Array(64, 83, 27, 6, 0, -6, -26, 7, -61, 80, -45, 118, -30, 94, -16, 118, 0, 95, 13, 119, 26, 95, 41, 119)
 
 [node name="PlantDone" type="TextureButton" parent="."]

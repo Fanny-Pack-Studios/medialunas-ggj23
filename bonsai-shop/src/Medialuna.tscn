@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://1rsugtl3yhch"]
 
-[ext_resource type="Texture2D" uid="uid://ba06yj17gptcd" path="res://assets/medialuna.svg" id="1_rdybx"]
+[ext_resource type="Texture2D" uid="uid://dpumhua1o2hrl" path="res://assets/UI/UI Assets/medialuna.png" id="2_4tv66"]
 [ext_resource type="Script" path="res://src/Medialuna.gd" id="2_ovbxt"]
 
 [node name="Medialuna" type="Node2D"]
@@ -8,5 +8,5 @@ script = ExtResource("2_ovbxt")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 modulate = Color(0.811765, 0.784314, 0.545098, 1)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_rdybx")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_4tv66")

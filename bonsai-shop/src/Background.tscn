@@ -56,23 +56,24 @@ transform = Transform3D(0.974761, -0.22325, 0, 0.22325, 0.974761, 0, 0, 0, 1, 0,
 mesh = SubResource("BoxMesh_ajtqp")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.45896, 2.16578, -0.366447)
+transform = Transform3D(-4.33408e-08, -0.129938, 0.991522, -5.67976e-09, 0.991522, 0.129938, -1, 0, -4.37114e-08, 3.88044, 2.67259, -0.351532)
 current = true
 fov = 60.0
+size = 3.5
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6nukq")
 camera_attributes = SubResource("CameraAttributesPhysical_j2pu1")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.35876, 5.32034, 0)
+transform = Transform3D(-4.37114e-08, -0.707107, 0.707107, 0, 0.707107, 0.707107, -1, 3.09086e-08, -3.09086e-08, 4.3305, 5.32034, 0)
 light_color = Color(0.894118, 0.878431, 0.866667, 1)
 light_energy = 2.0
 spot_range = 6.08952
 spot_angle = 60.0
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.232869, 4.40656, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.03349, 4.40656, 0)
 light_color = Color(0.894118, 0.878431, 0.866667, 1)
 light_energy = 7.0
 shadow_enabled = true

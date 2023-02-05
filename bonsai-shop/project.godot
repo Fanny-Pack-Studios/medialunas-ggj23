@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Scoreboard="*res://src/Scoreboard.gd"
 Background="*res://src/Background.tscn"
+Music="*res://src/Music.tscn"
 
 [debug]
 

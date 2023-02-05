@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://26i1b6p1rp1q"]
+
+[ext_resource type="Script" path="res://src/GameOver.gd" id="1_g4ti5"]
+[ext_resource type="FontFile" uid="uid://dxsyw7tkwg238" path="res://assets/Fonts/PasseroOne-Regular.ttf" id="2_gc2km"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g4ti5")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 2.0
+offset_top = 280.0
+offset_right = 1917.0
+offset_bottom = 800.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 95
+theme_override_constants/shadow_outline_size = 146
+theme_override_constants/line_spacing = 36
+theme_override_fonts/font = ExtResource("2_gc2km")
+theme_override_font_sizes/font_size = 406
+text = "GAME OVER"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 2
+offset_left = 647.0
+offset_top = 706.0
+offset_right = 2562.0
+offset_bottom = 1226.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 33
+theme_override_constants/shadow_outline_size = 51
+theme_override_constants/line_spacing = 36
+theme_override_fonts/font = ExtResource("2_gc2km")
+theme_override_font_sizes/font_size = 124
+text = "GAME OVER"

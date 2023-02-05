@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://1rsugtl3yhch" path="res://src/Medialuna.tscn" id="2_lmhsc"]
 [ext_resource type="PackedScene" uid="uid://dnuek13mjmhiy" path="res://src/Trimmer.tscn" id="2_lt1ds"]
 [ext_resource type="Script" path="res://src/ScoreLabelUI.gd" id="4_wwrc1"]
-[ext_resource type="FontFile" uid="uid://dxwogwonil3x8" path="res://assets/Fonts/kirby-no-kira-kizzu-brk.regular.ttf" id="6_l16mo"]
+[ext_resource type="FontFile" uid="uid://dxsyw7tkwg238" path="res://assets/Fonts/PasseroOne-Regular.ttf" id="6_1rtlc"]
 [ext_resource type="Script" path="res://src/ZoomContainer.gd" id="7_gla5e"]
 [ext_resource type="Texture2D" uid="uid://vxqv6lb56dps" path="res://assets/UI/UI Assets/in_game.png" id="8_diw7q"]
 
@@ -41,22 +41,37 @@ script = ExtResource("4_wwrc1")
 
 [node name="Score" type="Label" parent="GameUI"]
 layout_mode = 1
-offset_left = 260.0
-offset_top = 104.0
-offset_right = 639.0
-offset_bottom = 152.0
+offset_left = 231.0
+offset_top = 94.0
+offset_right = 350.0
+offset_bottom = 158.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("6_l16mo")
+theme_override_colors/font_shadow_color = Color(0.4, 0.227451, 0.0980392, 1)
+theme_override_fonts/font = ExtResource("6_1rtlc")
 theme_override_font_sizes/font_size = 50
 text = "0"
 
+[node name="Level" type="Label" parent="GameUI"]
+layout_mode = 1
+offset_left = 840.0
+offset_top = 41.0
+offset_right = 1140.0
+offset_bottom = 168.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.4, 0.227451, 0.0980392, 1)
+theme_override_fonts/font = ExtResource("6_1rtlc")
+theme_override_font_sizes/font_size = 100
+text = "Level: 1"
+
 [node name="Timer" type="Label" parent="GameUI"]
 layout_mode = 0
-offset_left = 1714.0
-offset_top = 156.0
-offset_right = 2006.0
+offset_left = 1721.0
+offset_top = 140.0
+offset_right = 1774.0
 offset_bottom = 204.0
-theme_override_fonts/font = ExtResource("6_l16mo")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.302564, 0.166633, 0.0645296, 1)
+theme_override_fonts/font = ExtResource("6_1rtlc")
 theme_override_font_sizes/font_size = 50
 text = "00"
 
@@ -68,7 +83,6 @@ texture = ExtResource("8_diw7q")
 
 [node name="ActualTimer" type="Timer" parent="."]
 wait_time = 60.0
-autostart = true
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(1049, 531)

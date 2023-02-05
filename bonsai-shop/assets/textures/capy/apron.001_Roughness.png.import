@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bi810wasqlltv"
-path="res://.godot/imported/apron.001_Roughness.png-5dc46b06566fe0118dd1572f84f97f7b.ctex"
+path="res://.godot/imported/apron.001_Roughness.png-cc32100238b2e5aa9470e42b945536b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/capy/apron.001_Roughness.png"
-dest_files=["res://.godot/imported/apron.001_Roughness.png-5dc46b06566fe0118dd1572f84f97f7b.ctex"]
+source_file="res://assets/textures/capy/apron.001_Roughness.png"
+dest_files=["res://.godot/imported/apron.001_Roughness.png-cc32100238b2e5aa9470e42b945536b7.ctex"]
 
 [params]
 

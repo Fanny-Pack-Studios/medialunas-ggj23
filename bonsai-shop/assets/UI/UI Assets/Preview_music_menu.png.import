@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db4al8kxeaxt1"
-path="res://.godot/imported/apron.001_Height.png-5ead1b00485f0b78446fa8fc25d4d2de.ctex"
+uid="uid://dpui5t3uqwarw"
+path="res://.godot/imported/Preview_music_menu.png-d331e422e648f02df83724414da63fca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/capy/apron.001_Height.png"
-dest_files=["res://.godot/imported/apron.001_Height.png-5ead1b00485f0b78446fa8fc25d4d2de.ctex"]
+source_file="res://assets/UI/UI Assets/Preview_music_menu.png"
+dest_files=["res://.godot/imported/Preview_music_menu.png-d331e422e648f02df83724414da63fca.ctex"]
 
 [params]
 

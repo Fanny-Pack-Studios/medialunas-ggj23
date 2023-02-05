@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dnuek13mjmhiy"]
+[gd_scene load_steps=11 format=3 uid="uid://dnuek13mjmhiy"]
 
 [ext_resource type="Script" path="res://src/Trimmer.gd" id="1_dti1e"]
 [ext_resource type="PackedScene" uid="uid://cl08tnu0blikq" path="res://src/Cutter.tscn" id="2_v0eyp"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://q7u7o7m4uw57" path="res://src/PatternVisualizer.tscn" id="4_eu7rg"]
 [ext_resource type="PackedScene" uid="uid://cuvstdjl027sq" path="res://src/Bonsai.tscn" id="4_g52we"]
 [ext_resource type="Texture2D" uid="uid://c1vkd8ly416a" path="res://assets/done.png" id="5_5qvva"]
+[ext_resource type="Script" path="res://src/Feedback.gd" id="7_m4gbp"]
 
 [sub_resource type="Gradient" id="Gradient_32y43"]
 offsets = PackedFloat32Array(0.515588, 1)
@@ -35,15 +36,14 @@ cutter_scene = ExtResource("2_v0eyp")
 
 [node name="Mata" parent="." instance=ExtResource("3_4yi4j")]
 position = Vector2(1037, 466)
-polygon = PackedVector2Array(80, 72, 79.0151, 59.4852, 76.0845, 47.2786, 71.2805, 35.6808, 64.7214, 24.9772, 56.5685, 15.4315, 47.0228, 7.27864, 36.3192, 0.719475, 24.7214, -4.08453, 12.5148, -7.01507, -3.49691e-06, -8, -12.5148, -7.01507, -24.7214, -4.08452, -36.3192, 0.719482, -47.0228, 7.27864, -56.5685, 15.4315, -64.7214, 24.9772, -71.2805, 35.6808, -76.0845, 47.2786, -79.0151, 59.4852, -80, 72, -79.0151, 84.5147, -76.0845, 96.7214, -71.2805, 108.319, -64.7214, 119.023, -56.5685, 128.569, -47.0228, 136.721, -36.3193, 143.281, -24.7214, 148.085, -12.5148, 151.015, 9.5399e-07, 152, 12.5148, 151.015, 24.7214, 148.085, 36.3193, 143.281, 47.0228, 136.721, 56.5685, 128.569, 64.7214, 119.023, 71.2805, 108.319, 76.0845, 96.7214, 79.0151, 84.5147)
 
 [node name="Bonsai" parent="Mata" instance=ExtResource("4_g52we")]
 
 [node name="PatternVisualizer" parent="." instance=ExtResource("4_eu7rg")]
 z_index = 1
 position = Vector2(1037, 466)
-color = Color(0, 0.34902, 0.172549, 0.239159)
-polygon = PackedVector2Array(73, 69, 27, 6, 0, -6, -26, 7, -75, 71, 0, 146)
+color = Color(0, 0.34902, 0.172549, 0.137433)
+polygon = PackedVector2Array(64, 83, 27, 6, 0, -6, -26, 7, -61, 80, -45, 118, -30, 94, -16, 118, 0, 95, 13, 119, 26, 95, 41, 119)
 
 [node name="PlantDone" type="TextureButton" parent="."]
 offset_left = 1637.0
@@ -58,5 +58,11 @@ z_index = 2
 emitting = false
 amount = 144
 process_material = SubResource("ParticleProcessMaterial_3vajs")
+
+[node name="FeedbackPos" type="Node2D" parent="."]
+position = Vector2(1037, 466)
+
+[node name="Feedback" type="Sprite2D" parent="FeedbackPos"]
+script = ExtResource("7_m4gbp")
 
 [connection signal="pressed" from="PlantDone" to="." method="plant_done"]

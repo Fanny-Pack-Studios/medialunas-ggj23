@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cv4mxxyak63ll"
-path="res://.godot/imported/apron.001_Base_color.png-c5c98aeb5da10a4bad53486ea8d65d90.ctex"
+path="res://.godot/imported/apron.001_Base_color.png-7d3e545b074caa621992aa96dcad7fc5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/capy/apron.001_Base_color.png"
-dest_files=["res://.godot/imported/apron.001_Base_color.png-c5c98aeb5da10a4bad53486ea8d65d90.ctex"]
+source_file="res://assets/textures/capy/apron.001_Base_color.png"
+dest_files=["res://.godot/imported/apron.001_Base_color.png-7d3e545b074caa621992aa96dcad7fc5.ctex"]
 
 [params]
 

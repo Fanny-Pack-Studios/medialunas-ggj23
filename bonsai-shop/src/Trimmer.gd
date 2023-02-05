@@ -35,7 +35,7 @@ var points_thresholds := {
 	3000: PointThreshold.new(0,"POOR"),
 	5000: PointThreshold.new(0,"REALLY_BAD"),
 }
-const LOWER_THRESHOLD_MESSAGE ="HORRFIC"
+const LOWER_THRESHOLD_MESSAGE ="DISGUSTING"
 
 func _ready():
 	reset_points()
@@ -135,7 +135,9 @@ func plant_done():
 			threshold = points_thresholds[value]
 			Scoreboard.add_points(threshold.points)
 			break
-	print(threshold.message if threshold else LOWER_THRESHOLD_MESSAGE)
+
+	var feedback := Feedback.new(threshold.message if threshold else LOWER_THRESHOLD_MESSAGE)
+	$FeedbackPos.add_child(feedback)
 	emit_signal("plant_finished")
 
 func change_plant(new_bonsai):

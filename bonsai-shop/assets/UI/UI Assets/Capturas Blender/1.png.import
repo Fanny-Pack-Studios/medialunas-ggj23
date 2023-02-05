@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db4al8kxeaxt1"
-path="res://.godot/imported/apron.001_Height.png-5ead1b00485f0b78446fa8fc25d4d2de.ctex"
+uid="uid://do70i5d88hr2n"
+path="res://.godot/imported/1.png-6da58c22baf7ab49e4569fdcc83de809.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/capy/apron.001_Height.png"
-dest_files=["res://.godot/imported/apron.001_Height.png-5ead1b00485f0b78446fa8fc25d4d2de.ctex"]
+source_file="res://assets/UI/UI Assets/Capturas Blender/1.png"
+dest_files=["res://.godot/imported/1.png-6da58c22baf7ab49e4569fdcc83de809.ctex"]
 
 [params]
 

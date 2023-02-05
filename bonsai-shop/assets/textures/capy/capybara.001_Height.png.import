@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mvc4t0vtrmmd"
-path="res://.godot/imported/capybara.001_Height.png-e5c0ab3f5b5bed814dcb0f957317e96b.ctex"
+path="res://.godot/imported/capybara.001_Height.png-ffc5722384077206e2e0146d4132f704.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/capy/capybara.001_Height.png"
-dest_files=["res://.godot/imported/capybara.001_Height.png-e5c0ab3f5b5bed814dcb0f957317e96b.ctex"]
+source_file="res://assets/textures/capy/capybara.001_Height.png"
+dest_files=["res://.godot/imported/capybara.001_Height.png-ffc5722384077206e2e0146d4132f704.ctex"]
 
 [params]
 

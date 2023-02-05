@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b1keo0tyf11o1"
-path="res://.godot/imported/capy.glb-4e7734fe67482d93db1aaad7dfca3619.scn"
+path="res://.godot/imported/capy.glb-88f0b9f2c4743b1be0c1fcdff022c565.scn"
 
 [deps]
 
-source_file="res://assets/UI/capy/capy.glb"
-dest_files=["res://.godot/imported/capy.glb-4e7734fe67482d93db1aaad7dfca3619.scn"]
+source_file="res://assets/textures/capy/capy.glb"
+dest_files=["res://.godot/imported/capy.glb-88f0b9f2c4743b1be0c1fcdff022c565.scn"]
 
 [params]
 

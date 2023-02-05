@@ -11,12 +11,12 @@ shader_parameter/mask_texture = ExtResource("3_dhfo2")
 
 [node name="PatternVisualizer" type="Polygon2D"]
 color = Color(0, 0.34902, 0.172549, 0.189168)
-polygon = PackedVector2Array(73, 69, 27, 6, 0, -6, -26, 7, -75, 71, 0, 146)
+polygon = PackedVector2Array(42, 66, 27, 6, 0, -6, -26, 7, -40, 68, 0, 136)
 script = ExtResource("1_4s1an")
 
 [node name="Line2D" type="Line2D" parent="."]
 material = SubResource("ShaderMaterial_xblnj")
-points = PackedVector2Array(73, 69, 27, 6, 0, -6, -26, 7, -75, 71, 0, 146, 73.01, 69.01)
+points = PackedVector2Array(42, 66, 27, 6, 0, -6, -26, 7, -40, 68, 0, 136, 42.01, 66.01)
 width = 10.749
 texture = ExtResource("3_dhfo2")
 texture_mode = 1

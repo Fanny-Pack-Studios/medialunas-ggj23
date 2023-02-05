@@ -5,7 +5,6 @@ const BASE_DISTANCE := 80
 const CENTER_OFFSET := .9
 const ANGLES := 40
 
-@onready var dirt := $Dirt
 
 func _ready():
 	set_shape(
@@ -68,4 +67,3 @@ func points_to_local(new_points: PackedVector2Array):
 
 func set_shape(new_points: PackedVector2Array):
 	polygon = new_points
-	dirt.set_shape(new_points)

@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfyj5ejfcek8a"
-path.s3tc="res://.godot/imported/capy_6.png-5c4ae108f6a0b12305cd101a9bd545d1.s3tc.ctex"
-path.etc2="res://.godot/imported/capy_6.png-5c4ae108f6a0b12305cd101a9bd545d1.etc2.ctex"
+path.s3tc="res://.godot/imported/capy_6.png-d5b10bf769af52e65639ba474450f552.s3tc.ctex"
+path.etc2="res://.godot/imported/capy_6.png-d5b10bf769af52e65639ba474450f552.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc", "etc2"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/UI/capy/capy_6.png"
-dest_files=["res://.godot/imported/capy_6.png-5c4ae108f6a0b12305cd101a9bd545d1.s3tc.ctex", "res://.godot/imported/capy_6.png-5c4ae108f6a0b12305cd101a9bd545d1.etc2.ctex"]
+source_file="res://assets/textures/capy/capy_6.png"
+dest_files=["res://.godot/imported/capy_6.png-d5b10bf769af52e65639ba474450f552.s3tc.ctex", "res://.godot/imported/capy_6.png-d5b10bf769af52e65639ba474450f552.etc2.ctex"]
 
 [params]
 

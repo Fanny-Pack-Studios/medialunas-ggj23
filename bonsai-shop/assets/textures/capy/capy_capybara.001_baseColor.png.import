@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5u2oiqd0et6r"
-path.s3tc="res://.godot/imported/capy_capybara.001_baseColor.png-433a6c6fd07111a613932f507cc60705.s3tc.ctex"
-path.etc2="res://.godot/imported/capy_capybara.001_baseColor.png-433a6c6fd07111a613932f507cc60705.etc2.ctex"
+path.s3tc="res://.godot/imported/capy_capybara.001_baseColor.png-46a780c828387dcd078fa2ede21d2ddc.s3tc.ctex"
+path.etc2="res://.godot/imported/capy_capybara.001_baseColor.png-46a780c828387dcd078fa2ede21d2ddc.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc", "etc2"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/UI/capy/capy_capybara.001_baseColor.png"
-dest_files=["res://.godot/imported/capy_capybara.001_baseColor.png-433a6c6fd07111a613932f507cc60705.s3tc.ctex", "res://.godot/imported/capy_capybara.001_baseColor.png-433a6c6fd07111a613932f507cc60705.etc2.ctex"]
+source_file="res://assets/textures/capy/capy_capybara.001_baseColor.png"
+dest_files=["res://.godot/imported/capy_capybara.001_baseColor.png-46a780c828387dcd078fa2ede21d2ddc.s3tc.ctex", "res://.godot/imported/capy_capybara.001_baseColor.png-46a780c828387dcd078fa2ede21d2ddc.etc2.ctex"]
 
 [params]
 

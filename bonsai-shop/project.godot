@@ -36,4 +36,5 @@ enabled=PackedStringArray()
 
 [rendering]
 
+renderer/rendering_method="mobile"
 environment/defaults/default_clear_color=Color(0.0313726, 0.215686, 0.25098, 1)

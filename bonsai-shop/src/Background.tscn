@@ -57,7 +57,7 @@ transform = Transform3D(0.974761, -0.22325, 0, 0.22325, 0.974761, 0, 0, 0, 1, 0,
 mesh = SubResource("BoxMesh_ajtqp")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-4.33408e-08, -0.129938, 0.991522, -5.67976e-09, 0.991522, 0.129938, -1, 0, -4.37114e-08, 3.88044, 2.67259, -0.351532)
+transform = Transform3D(-4.33484e-08, -0.128605, 0.991696, -5.62151e-09, 0.991696, 0.128605, -1, 1.06581e-14, -4.37114e-08, 3.88044, 2.67259, -0.351532)
 current = true
 fov = 60.0
 size = 3.5

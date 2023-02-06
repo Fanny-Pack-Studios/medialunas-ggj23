@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dlo7uptm4bemf"]
+[gd_scene load_steps=11 format=3 uid="uid://dlo7uptm4bemf"]
 
-[ext_resource type="PackedScene" uid="uid://bpocu1ukyttrf" path="res://assets/Background/Capybara_bonsai_shop1.gltf" id="1_f7g76"]
+[ext_resource type="PackedScene" uid="uid://cs1qpgpoqius2" path="res://assets/Background/Capybara_bonsai_shop1.gltf" id="1_f7g76"]
 [ext_resource type="PackedScene" uid="uid://dx8t8d7ym6cbs" path="res://src/Capy.tscn" id="2_arn6s"]
+[ext_resource type="PackedScene" uid="uid://cgebsf5nhelg2" path="res://src/Trees.tscn" id="3_o5ogn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r35qc"]
 albedo_color = Color(0.584314, 0.521569, 0.513726, 1)
@@ -88,3 +89,6 @@ mesh = SubResource("PrismMesh_dg6sr")
 
 [node name="Capy" parent="." instance=ExtResource("2_arn6s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.58429, 0.566915, -4.26337)
+
+[node name="Trees" parent="." instance=ExtResource("3_o5ogn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.29036, -0.968122, 0)

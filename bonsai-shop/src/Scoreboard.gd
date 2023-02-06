@@ -25,3 +25,9 @@ func get_points():
 
 func get_target_points():
 	return level * 5
+
+
+func reset():
+	_score = 0
+	lastScore = 0
+	level = 1

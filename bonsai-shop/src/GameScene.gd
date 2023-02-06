@@ -2,9 +2,10 @@ extends Node2D
 
 @export var medialuna_scene: PackedScene
 var mata_pos :Vector2
-const TIMER_TIME := 30
+const TIMER_TIME := 60
 
 func _ready():
+	Scoreboard.reset()
 	$Trimmer.plant_finished.connect(pass_bonsai)
 	mata_pos = $Trimmer/Mata.global_position
 	Scoreboard.score_changed.connect(on_score)

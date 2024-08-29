@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn34vr1sdos7v"
-path.s3tc="res://.godot/imported/Image.png-4b646b183e5b65f2bb035d316d46cbbc.s3tc.ctex"
-path.etc2="res://.godot/imported/Image.png-4b646b183e5b65f2bb035d316d46cbbc.etc2.ctex"
+uid="uid://be7ged137t7vf"
+path.s3tc="res://.godot/imported/capybara_001_Roughness.png-8403560ba82a25e7655b124818cee4d2.s3tc.ctex"
+path.etc2="res://.godot/imported/capybara_001_Roughness.png-8403560ba82a25e7655b124818cee4d2.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc", "etc2"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/capy/Image.png"
-dest_files=["res://.godot/imported/Image.png-4b646b183e5b65f2bb035d316d46cbbc.s3tc.ctex", "res://.godot/imported/Image.png-4b646b183e5b65f2bb035d316d46cbbc.etc2.ctex"]
+source_file="res://assets/capy/capybara_001_Roughness.png"
+dest_files=["res://.godot/imported/capybara_001_Roughness.png-8403560ba82a25e7655b124818cee4d2.s3tc.ctex", "res://.godot/imported/capybara_001_Roughness.png-8403560ba82a25e7655b124818cee4d2.etc2.ctex"]
 
 [params]
 

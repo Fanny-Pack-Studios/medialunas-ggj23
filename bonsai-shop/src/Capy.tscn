@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c71c6ici2fq1" path="res://assets/capy/capy.gltf" id="1_405sr"]
 
 [node name="Capy" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00101542, 0.00346696, 0.000100374)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00101542, 0.00346696, -1.79845)
 script = ExtResource("1_4plrs")
 
 [node name="capy" parent="." instance=ExtResource("1_405sr")]

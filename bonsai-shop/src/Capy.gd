@@ -6,4 +6,4 @@ func _ready():
 
 
 func on_score(_to_points, _delta):
-	$capy/AnimationPlayer.play("ArmatureAction001")
+	$capy/AnimationPlayer.play("macetaAction")
